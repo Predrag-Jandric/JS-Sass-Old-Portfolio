@@ -1,0 +1,81 @@
+
+.projects {
+    text-align: center;
+    @include flex(center, flex-start, row nowrap, 0);
+    color: $gray-text;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        background-color: transparent;
+        place-items: center;
+        
+
+        @media(max-width:1400px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media(max-width:768px) {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+        .projects__item-global {
+            width: 300px;
+            box-shadow: $box-shadow;
+            border-radius: 5px;
+
+
+            // all project pictures (thumbnails)
+            .projects__one__img {
+                background: url("../../assets/img/projects-imgs/projects__one__img.png") no-repeat center / cover;
+            }
+
+            .projects__two__img {
+                background: url('../../assets/img/projects-imgs/projects__two__img.png') no-repeat center / cover;
+            }
+
+            .projects__three__img {
+                background: url("../../assets/img/projects-imgs/projects__three__img.png") no-repeat center / cover;
+            }
+
+            .projects__four__img {
+                background: url("../../assets/img/projects-imgs/projects__four__img.png") no-repeat center / cover;
+            }
+
+            .projects__global__img {
+                height: 300px;
+                border-radius: 5px 5px 0 0;
+            }
+
+            .projects__text {
+                padding: 2rem 1.3rem;
+                background-color: 5px;
+                border-radius: 0 0 5px 5px;
+                background: $pure-white;
+
+                .projects__h3 {
+                    font-size: 1.3rem;
+                    margin: 1rem 0;
+                }
+
+                .projects__p {
+                    margin: 1.3rem 0 3rem 0;
+
+                    .projects__a {
+                        @extend .link-properties;
+
+                        &:hover {
+                            @extend .link-hover-gradient;
+                        }
+                    }
+                }
+
+                .projects__btn__container {
+                    @include flex(center, center, row nowrap, 1rem);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.nav {
+    background-color: #21262c;
+    padding: 15px 0;
+    position: relative;
+    z-index: 1000;
+    // height: 10vh;
+
+    &__wrapper {
+        @include flex(space-between);
+        width: 80%;
+        margin: 0px auto;
+
+        .nav__logo {
+
+            .nav__image {
+                width: 70px;
+                height: 70px;
+                border-radius: 5px;
+                margin-top: 8px;
+            }
+        }
+
+        .nav__list {
+            display: flex;
+
+            @media(max-width:992px) {
+                @include position(absolute, 100%, 0, auto, 0);
+                background-color: #21262c;
+                @include flex(flex-start, center, column nowrap, 1rem);
+                padding: 1rem 0;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+
+            &.show {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            .nav__item {
+                position: relative;
+                z-index: 1;
+
+
+                &::before {
+                    content: "";
+                    @include position(absolute, 100%, auto, auto, 10%);
+                    background: $yellow;
+                    width: 80%;
+                    height: 5%;
+                    z-index: -10;
+                    transform: scale(0);
+                    transition: 0.2s ease-in
+                }
+
+                &:hover {
+
+                    &::before {
+                        transform: scale(1);
+                    }
+                }
+
+                .nav__link {
+                    color: $white;
+                    padding: 1rem;
+                    font-size: 1.3rem;
+                    text-transform: capitalize;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .nav__btn {
+        display: none;
+        color: $white;
+        cursor: pointer;
+
+        @media(max-width:992px) {
+            display: block;
+        }
+    }
+}

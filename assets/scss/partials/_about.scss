@@ -1,0 +1,91 @@
+.about {
+    @include flex(center, flex-start, row nowrap, 0);
+    color: $gray-text;
+
+
+    &__wrapper {
+        background-color: $pure-white;
+        box-shadow: $box-shadow;
+        margin: 0 2rem;
+        border-radius: 5px;
+        padding: 2.5rem;
+        max-width: 70rem;
+
+        .about__content {
+            @include flex(flex-start, flex-start, row nowrap, 3rem);
+
+            @media(max-width:900px) {
+                flex-direction: column;
+            }
+
+            @media(max-width:600px) {
+                gap: 1.5rem;
+            }
+
+            .about__item {
+
+                &:first-child {
+                    @include flex(flex-start, center, row nowrap, 2rem);
+
+                    img {
+                        width: 10rem;
+                    }
+
+                    @media(max-width:600px) {
+                        flex-direction: column;
+                        margin: 0px auto;
+                    }
+
+                    .about__personal-info {
+
+                        @media(max-width:600px) {
+                            text-align: center;
+                        }
+
+                        .about__p {
+                            margin-bottom: .8rem;
+                            font-weight: bold;
+
+                            span {
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+
+                .about__title {
+                    margin-bottom: 1rem;
+
+                    @media(max-width:600px) {
+                        text-align: center;
+                    }
+                }
+
+                .about__desc {
+                    line-height: 1.5;
+
+                    @media(max-width:600px) {
+                        text-align: center;
+                    }
+
+                    .about__link {
+                        @extend .link-properties;
+
+                        &:hover {
+                            @extend .link-hover-gradient;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about__btn {
+            margin: 0 auto;
+            margin-top: 2.5rem;
+
+            a {
+                width: 15rem;
+            }
+        }
+    }
+}

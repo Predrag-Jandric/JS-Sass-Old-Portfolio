@@ -1,0 +1,103 @@
+
+.footer {
+    @include flex(center, center, column nowrap, 0);
+    background: url('../../assets/img/footer-bg.jpg') no-repeat center / cover;
+    background-attachment: fixed;
+    padding: 6rem 0;
+    color: $gray-text;
+    margin-top: 7rem;
+
+    &__wrapper {
+        @include flex(flex-start, flex-start, row nowrap, 3rem);
+        max-width: 70rem;
+        background-color: $pure-white;
+        border-radius: 5px;
+        padding: 2.5rem;
+        margin: 0 2rem;
+
+        @media(max-width:900px){
+            flex-direction: column;
+        }
+
+        .footer__item {
+
+            .footer__title {
+                font-size: 1.5rem;
+                position: relative;
+                margin-bottom: 2rem;
+
+                &::after {
+                    content: '';
+                    @include position(absolute, 120%, auto, auto, 0%);
+                    background-color: $yellow;
+                    height: 8%;
+                    width: 5rem;
+                }
+            }
+
+            &.footer__item__one {
+
+                input {
+                    height: 35px;
+                    border-radius: 5px;
+                    border: 1px $gray-text solid;
+                    padding: 10px;
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+
+                textarea {
+                    border-radius: 5px;
+                    border: 1px $gray-text solid;
+                    padding: 10px;
+                    width: 100%;
+                }
+
+                .footer__btn {
+                    width: 8rem;
+                    cursor: pointer;
+                    border: 2px solid $yellow;
+                    margin-top: 1rem;
+
+                    &:focus {
+                        border: 2px solid dimgray;
+                    }
+
+                    span {
+                        padding: 8px 0;
+                        z-index: 50;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+
+            &.footer__item__two {
+
+                .footer__social {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        margin-top: 1rem;
+        color: $light-gray-text;
+        line-height: 2rem;
+        font-size: 0.9rem;
+
+        &__a {
+            color: $yellow;
+            font-size: 1.05rem;
+
+            &:hover {
+                color: $hover-yellow;
+            }
+        }
+    }
+}
+
+

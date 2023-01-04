@@ -1,0 +1,74 @@
+
+.skills {
+    @include flex(center, center, column nowrap, 4rem);
+    padding: 2.5rem 0rem;
+    background: url('../../assets/img/skills-bkgr.jpg') no-repeat center / cover;
+    background-attachment: fixed;
+    
+    &__wrapper {
+        justify-content: center;
+        width: 900px;
+        gap: 1.5rem; 
+        font-size: 1.1rem;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); 
+
+        @media(max-width:1400px) {
+        grid-template-columns: repeat(4, 1fr);
+        width: 700px; 
+        }
+
+        @media(max-width:768px) {
+        grid-template-columns: repeat(2, 1fr); 
+        width: 300px;
+        }
+
+        .skills__card {
+            @include flex(center, center, column nowrap, 0);
+
+            p {
+                color: $white;
+            }
+
+            .skills__global {
+                width: 115px;
+                height: 115px;
+            
+                @media(max-width:425px){
+                    width: 85px;
+                    height: 85px;
+                }
+            }
+        }
+    }
+}
+
+
+/*--- skills section images ---*/
+
+.skills__html {
+    background: url('../../assets/img/skills-imgs/html.png') no-repeat center / cover;
+}
+.skills__css {
+    background: url('../../assets/img/skills-imgs/css.png') no-repeat center / cover;
+}
+.skills__js {
+    background: url('../../assets/img/skills-imgs/js.png') no-repeat center / cover;
+}
+.skills__git {
+    background: url('../../assets/img/skills-imgs/git.png') no-repeat center / cover;
+}
+.skills__sass {
+    background: url('../../assets/img/skills-imgs/sass.png') no-repeat center / cover;
+}
+.skills__bootstrap {
+    background: url('../../assets/img/skills-imgs/bootstrap.png') no-repeat center / cover;
+}
+.skills__photoshop {
+    background: url('../../assets/img/skills-imgs/photoshop.png') no-repeat center / cover;
+}
+.skills__figma {
+    background: url('../../assets/img/skills-imgs/figma.png') no-repeat center / cover;
+}
+
+
