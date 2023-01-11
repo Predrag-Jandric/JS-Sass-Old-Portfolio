@@ -116,13 +116,13 @@ img {
   transform: translate(-50%);
 }
 
-.link-properties {
+.link-properties, .about__wrapper .about__content .about__item .about__desc .about__link {
   font-weight: 700;
   color: #2E72B2;
   text-decoration: underline;
 }
 
-.link-hover-gradient {
+.link-hover-gradient, .about__wrapper .about__content .about__item .about__desc .about__link:hover {
   background: radial-gradient(circle, #2E72B2 0%, #3C87CD 16%, #D8AD48 32%, #F7B42D 49%, #D8AD48 66%, #3C87CD 84%, #2E72B2 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -271,6 +271,91 @@ img {
 }
 .header__wrapper .header__p .header__span {
   color: #FFC654;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  gap: 0;
+  color: #4d5055;
+}
+.about__wrapper {
+  background-color: white;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+  margin: 0 2rem;
+  border-radius: 5px;
+  padding: 2.5rem;
+  max-width: 70rem;
+}
+.about__wrapper .about__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .about__wrapper .about__content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .about__wrapper .about__content {
+    gap: 1.5rem;
+  }
+}
+.about__wrapper .about__content .about__item:first-child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 2rem;
+}
+.about__wrapper .about__content .about__item:first-child img {
+  width: 10rem;
+}
+@media (max-width: 600px) {
+  .about__wrapper .about__content .about__item:first-child {
+    flex-direction: column;
+    margin: 0px auto;
+  }
+}
+@media (max-width: 600px) {
+  .about__wrapper .about__content .about__item:first-child .about__personal-info {
+    text-align: center;
+  }
+}
+.about__wrapper .about__content .about__item:first-child .about__personal-info .about__p {
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+.about__wrapper .about__content .about__item:first-child .about__personal-info .about__p span {
+  font-weight: normal;
+}
+.about__wrapper .about__content .about__item .about__title {
+  margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  .about__wrapper .about__content .about__item .about__title {
+    text-align: center;
+  }
+}
+.about__wrapper .about__content .about__item .about__desc {
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .about__wrapper .about__content .about__item .about__desc {
+    text-align: center;
+  }
+}
+.about__wrapper .about__btn {
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+.about__wrapper .about__btn a {
+  width: 15rem;
 }
 
 /*# sourceMappingURL=style.css.map */
