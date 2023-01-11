@@ -315,6 +315,7 @@ img {
 }
 .about__wrapper .about__content .about__item:first-child img {
   width: 10rem;
+  border-radius: 50%;
 }
 @media (max-width: 600px) {
   .about__wrapper .about__content .about__item:first-child {
@@ -365,7 +366,7 @@ img {
   flex-flow: column nowrap;
   gap: 4rem;
   padding: 2.5rem 0rem;
-  background: url("../../assets/img/skills-bkgr.jpg") no-repeat center/cover;
+  background: url("../../assets/img/skills-imgs/skills-bkgr.jpg") no-repeat center/cover;
   background-attachment: fixed;
 }
 .skills__wrapper {
