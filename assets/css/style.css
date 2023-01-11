@@ -510,4 +510,96 @@ img {
   gap: 1rem;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 0;
+  background: url("../../assets/img/footer-bg.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+  padding: 6rem 0;
+  color: #4d5055;
+  margin-top: 7rem;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  gap: 3rem;
+  max-width: 70rem;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2.5rem;
+  margin: 0 2rem;
+}
+@media (max-width: 900px) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+}
+.footer__wrapper .footer__item .footer__title {
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.footer__wrapper .footer__item .footer__title::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  right: auto;
+  bottom: auto;
+  left: 0%;
+  background-color: #FFC654;
+  height: 8%;
+  width: 5rem;
+}
+.footer__wrapper .footer__item.footer__item__one input {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px #4d5055 solid;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.footer__wrapper .footer__item.footer__item__one textarea {
+  border-radius: 5px;
+  border: 1px #4d5055 solid;
+  padding: 10px;
+  width: 100%;
+}
+.footer__wrapper .footer__item.footer__item__one .footer__btn {
+  width: 8rem;
+  cursor: pointer;
+  border: 2px solid #FFC654;
+  margin-top: 1rem;
+}
+.footer__wrapper .footer__item.footer__item__one .footer__btn:focus {
+  border: 2px solid dimgray;
+}
+.footer__wrapper .footer__item.footer__item__one .footer__btn span {
+  padding: 8px 0;
+  z-index: 50;
+  font-weight: 500;
+}
+.footer__wrapper .footer__item.footer__item__two .footer__social {
+  margin-top: 1rem;
+}
+.footer__copyright {
+  text-align: center;
+  margin-top: 1rem;
+  color: #D3D3D3;
+  line-height: 2rem;
+  font-size: 0.9rem;
+}
+.footer__copyright__a {
+  color: #FFC654;
+  font-size: 1.05rem;
+}
+.footer__copyright__a:hover {
+  color: #F7B42D;
+}
+
 /*# sourceMappingURL=style.css.map */
