@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: $text-font;
     scroll-behavior: smooth;
     list-style-type: none;
     text-decoration: none;
@@ -54,20 +54,20 @@ img {
 
     a {
         z-index: 30;
-        padding: 8px 0;
+        padding: 9px 0;
         width: 10rem;
-        font-weight: 500;
         @include flex(center);
         color: $gray-text;
-        border: 2px solid $yellow;
+        border: 1px solid $yellow;
         border-radius: 50px;
+        font-size: 0.85rem;
 
         &:hover {
-            border: 2px solid $hover-yellow;
+            border: 1px solid $hover-yellow;
         }
 
         &:focus {
-            border: 2px solid dimgray;
+            border: 1px solid dimgray;
         }
     }
 }
@@ -98,7 +98,7 @@ img {
 #section__title {
     font-size: 3rem;
     text-align: center;
-    font-family: 'arvo';
+    font-family: $headers-font;
     color: $gray-text;
     letter-spacing: 2px;
     position: relative;
@@ -119,7 +119,7 @@ img {
 
 // all blue links and their hovers
 .link-properties {
-    font-weight: 700;
+    
     color: $link-color;
     text-decoration: underline;
 }
@@ -144,3 +144,5 @@ img {
         }
     }
 }
+
+// JavaScript appear effect class for about section is here 

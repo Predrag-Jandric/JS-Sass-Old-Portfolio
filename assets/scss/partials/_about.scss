@@ -2,7 +2,6 @@
     @include flex(center, flex-start, row nowrap, 0);
     color: $gray-text;
 
-
     &__wrapper {
         background-color: $pure-white;
         box-shadow: $box-shadow;
@@ -56,6 +55,8 @@
 
                 .about__title {
                     margin-bottom: 1rem;
+                    font-family: $headers-font;
+                    font-size: 1.3rem;
 
                     @media(max-width:600px) {
                         text-align: center;

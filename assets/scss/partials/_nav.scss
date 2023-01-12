@@ -2,8 +2,7 @@
     background-color: #21262c;
     padding: 15px 0;
     position: relative;
-    z-index: 1000;
-    // height: 10vh;
+    z-index: 100;
 
     &__wrapper {
         @include flex(space-between);
