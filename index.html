@@ -42,8 +42,8 @@
 
     <!-- Header section start -->
     <header class="header">
-        <div class="header__wrapper">
-            <h1 class="header__title" id="write-heading"></h1>
+        <div class="header__wrapper revealHeaderJS">
+            <h1 class="header__title"></h1>
             <p class="header__p">My name is <span class="header__span">Predrag</span> and I like creating well designed
                 webpages, and fulfilling my potential.</p>
             <div class="header__icons icons__global">
@@ -59,18 +59,18 @@
     <!-- Header section end -->
 
 
-    <h2 id="section__title">About</h2>
+    <h2 id="section__title__global">About</h2>
     
 
     <!-- About section start -->
     <section class="about" id="about">
-        <div class="about__wrapper">
+        <div class="about__wrapper revealAboutJS">
             <div class="about__content">
                 <article class="about__item">
                     <img src="assets/img/predrag-photo.png" alt="image missing" class="about__img">
                     <div class="about__personal-info">
                         <p class="about__p">Name: <br> <span class="about__span">Predrag Jandric</span></p>
-                        <p class="about__p">Email: <br> <span class="about__span">predrag.jandric.bg <br> @gmail.com</span></p>
+                        <p class="about__p">Email: <br> <span class="about__span"><a id="link__properties__global" href="mailto: predrag.jandric.bg@gmail.com">predrag.jandric.<br>bg@gmail.com</a></span></p>
                     </div>
                 </article>
                 <article class="about__item">
@@ -81,11 +81,11 @@
                         and more every day throught technology documentation and coding
                         challenges. I also make simple
                         <a href="https://www.youtube.com/@predragjandric/videos" target="_blank"
-                            class="about__link">Youtube tutorials</a> for myself, as a way to cement what I've learned.
+                        id="link__properties__global">Youtube tutorials</a> for myself, as a way to cement what I've learned.
                     </p>
                 </article>
             </div>
-            <button class="btn about__btn">
+            <button class="btn__global about__btn">
                 <a href="Predrag-Jandric-CV.pdf" download>View CV</a>
             </button>
         </div>
@@ -93,11 +93,11 @@
     <!-- About section end -->
 
     
-    <h2 id="section__title">Skills</h2>
+    <h2 id="section__title__global">Skills</h2>
 
 
     <!-- Skills section start -->
-    <section class="skills">
+    <section class="skills" id="parallaxJS">
         <div class="skills__wrapper">
             <article class="skills__card">
                 <div class="skills__html skills__global"></div>
@@ -136,7 +136,7 @@
     <!-- Skills section end -->
 
     
-    <h2 id="section__title">Projects</h2>
+    <h2 id="section__title__global">Projects</h2>
 
 
     <!-- Projects section start -->
@@ -148,12 +148,12 @@
 
                 <div class="projects__text">
                     <h3 class="projects__h3">My Portfolio</h3>
-                    <p class="projects__p">My most ambitions project so far, my Portfolio ! It took me a lot of time to complete, during which the Portfolio went throught many design and code changes. Written is <b>Sass</b>.</p>
+                    <p class="projects__p">My most ambitions project so far, my Portfolio ! It took me a lot of time to complete, during which the Portfolio went throught many design and code changes. Written is Sass.</p>
                     <div class="projects__btn__container">
-                        <button class="btn">
+                        <button class="btn__global">
                             <a href="https://github.com/PeterJan285/Portfolio--in-progress-" target="blank">Code</a>
                         </button>
-                        <button class="btn">
+                        <button class="btn__global">
                             <a href="#">Preview</a>
                         </button>
                     </div>
@@ -165,12 +165,12 @@
 
                 <div class="projects__text">
                     <h3 class="projects__h3">Valve Corp. Clone</h3>
-                    <p class="projects__p">I took inspiration and challenge from this original <a class="projects__a" href="https://www.valvesoftware.com/en/" target="blank">Valve webpage</a> which is made in Bootstrap and I've cloned it starting mobile first using, <b>Sass</b> and <b>JavaScript</b> instead.</p>
+                    <p class="projects__p">I took inspiration and challenge from this original <a id="link__properties__global" href="https://www.valvesoftware.com/en/" target="blank">Valve webpage</a> which is made in Bootstrap and I've cloned it starting mobile first using, Sass and JavaScript instead.</p>
                     <div class="projects__btn__container">
-                        <button class="btn">
+                        <button class="btn__global">
                             <a href="https://github.com/PeterJan285/SASS-valve-clone" target="blank">Code</a>
                         </button>
-                        <button class="btn">
+                        <button class="btn__global">
                             <a href="https://flourishing-kitsune-4259af.netlify.app/" target="blank">Preview</a>
                         </button>
                     </div>
@@ -182,12 +182,12 @@
 
                 <div class="projects__text">
                     <h3 class="projects__h3">Bootstrap webpage</h3>
-                    <p class="projects__p">A large webpage I came up with, through which I practiced how to design a page with a good and clean layout following <b>UI/UX</b> rules, and to hone my <b>Bootstrap</b> skills as well.</p>
+                    <p class="projects__p">A large webpage I came up with, through which I practiced how to design a page with a good and clean layout following UI/UX rules, and to hone my Bootstrap skills as well.</p>
                     <div class="projects__btn__container">
-                        <button class="btn">
+                        <button class="btn__global">
                             <a href="https://github.com/PeterJan285/Bootstrap-climate-webpage" target="blank">Code</a>
                         </button>
-                        <button class="btn">
+                        <button class="btn__global">
                             <a href="https://jade-daifuku-8d3a28.netlify.app/" target="blank">Preview</a>
                         </button>
                     </div>
@@ -199,12 +199,12 @@
 
                 <div class="projects__text">
                     <h3 class="projects__h3">Yahoo redesign</h3>
-                    <p class="projects__p">Using <b>Figma</b>, and guided by a book <b>"Don't make me think"</b>, I try to visually improve Yahoo homepage to the best of my abilities, which is cluttered and oversaturated with information.</p>
+                    <p class="projects__p">Using Figma, and guided by a book "Don't make me think", I try to visually improve Yahoo homepage to the best of my abilities, which is cluttered and oversaturated with information.</p>
                     <div class="projects__btn__container">
-                        <button class="btn">
+                        <button class="btn__global">
                             <a href="https://www.figma.com/file/jSJeenr5DVphklLYI8JzyH/My-Yahoo!-Redesign?t=NN5Yf7XsWgO3ugul-0" target="blank">Redesign</a>
                         </button>
-                        <button class="btn">
+                        <button class="btn__global">
                             <a href="https://www.yahoo.com/" target="blank">Original</a>
                         </button>
                     </div>
@@ -227,7 +227,7 @@
                 <input type="email" name="email" placeholder="Email Address" required>
                 <textarea placeholder="Message" rows="5" cols="60" name="description" required></textarea>
                 <input type="hidden" name="_subject" value="Portfolio message!">
-                <button class="btn footer__btn" type="submit"><span>Send</span></button>
+                <button class="btn__global footer__btn" type="submit"><span>Send</span></button>
                 <noscript>
                     <input type="submit" value="Submit form!" />
                 </noscript>
@@ -239,8 +239,9 @@
             <article class="footer__item footer__item__two">
                 <h3 class="footer__title">Get in Touch</h3>
                 <p>What do you think about my portfolio? Send me your opinion. You can also look me up on my LinkedIn,
-                    Git or Youtube channel.</p>
-                <p>Email:  </p>
+                    GitHub or Youtube channel.</p>
+                <p>Email <a id="link__properties__global" href="mailto: predrag.jandric.bg@gmail.com">predrag.jandric.bg@gmail.com</a></p>
+                
                 <article class="footer__social icons__global">
                     <a href="https://www.linkedin.com/in/predrag-jandric/" target="_blank"><img src="assets/img/linkedIn.png"
                             alt="image missing"></a>
@@ -262,6 +263,16 @@
 
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+
+
+    <!-- <div class="navbar">
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div> -->
+      
 
 </body>
 </html>

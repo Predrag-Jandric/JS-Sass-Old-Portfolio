@@ -69,14 +69,6 @@
                     @media(max-width:600px) {
                         text-align: center;
                     }
-
-                    .about__link {
-                        @extend .link-properties;
-
-                        &:hover {
-                            @extend .link-hover-gradient;
-                        }
-                    }
                 }
             }
         }

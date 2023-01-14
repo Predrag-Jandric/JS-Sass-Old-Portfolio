@@ -1,5 +1,5 @@
-// Open/close mobile menu
 
+// Open/close mobile menu
 const navBtn = document.getElementById("hamburger");
 const navList = document.getElementById('nav-list');
 
@@ -8,21 +8,51 @@ navBtn.addEventListener('click', () => {
 });
 
 
-// heading text appear
+// Header section appear effect
+var reveals = document.querySelectorAll('.revealHeaderJS');
+reveals.forEach(function(el){
+    el.classList.add('active');
+});
 
-const textElement = document.getElementById('write-heading')
-const text = `Let's make the web interesting`
 
-let idx = 3
+// About section appear effect
+window.addEventListener('scroll', revealAbout);
 
-writeHeading()
+  function revealAbout(){
+    var reveals = document.querySelectorAll('.revealAboutJS');
 
-function writeHeading() {
-    textElement.innerText = text.slice(0, idx)
+    for(var i = 0; i < reveals.length; i++){
+      var windowheight = window.innerHeight;
+      var revealtop = reveals[i].getBoundingClientRect().top;
+      var revealpoint = 150;
+      if(revealtop < windowheight - revealpoint){
+        reveals[i].classList.add('active');
+      }
+      // remove else statement to make element show only once and it WONT repeat animation again
+      else{
+        reveals[i].classList.remove('active');
+      }
+    }
+  }
 
-    idx++
+  // Skills section parallax effect
+const skillsSection = document.getElementById('parallaxJS');
 
-    setTimeout(writeHeading, 20)
-}
+  window.addEventListener('scroll', function() {
+    let scrollY = window.pageYOffset;
+    skillsSection.style.backgroundPositionY = -(scrollY * 0.2) + 'px';
+  });
+    
 
-// about secion appear effect
+
+// alternative hamburger
+// const hamburger = document.querySelector('.hamburger');
+
+// hamburger.addEventListener('mouseover', () => {
+//   hamburger.classList.add('active');
+// });
+
+// hamburger.addEventListener('mouseout', () => {
+//   hamburger.classList.remove('active');
+// });
+

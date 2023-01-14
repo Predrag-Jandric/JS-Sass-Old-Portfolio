@@ -6,9 +6,9 @@
     scroll-behavior: smooth;
     list-style-type: none;
     text-decoration: none;
-    transition: all 0.2s ease-in;
     outline: none;
     border: none;
+    transition: 0.2s all ease-in-out;
 }
 
 
@@ -26,12 +26,11 @@ img {
 }
 
 // all yellow btns and their hovers
-.btn {
+.btn__global {
     border-radius: 50px;
     @include flex(center);
     position: relative;
     overflow: hidden;
-    transition: all 300ms ease-in-out;
     background-color: $yellow;
 
     &::after {
@@ -43,7 +42,7 @@ img {
         left: -300%;
         transform: rotate(45deg);
         background-color: $hover-yellow;
-        transition: all 0.2s ease-in;
+        transition: all 0.3s ease-in-out;
     }
 
     &:hover {
@@ -95,7 +94,7 @@ img {
 
 
 // every section title (about, skills, projects, testimonials)
-#section__title {
+#section__title__global {
     font-size: 3rem;
     text-align: center;
     font-family: $headers-font;
@@ -117,17 +116,16 @@ img {
 }
 
 
-// all blue links and their hovers
-.link-properties {
-    
+// all blue links and their hovers (emails in "about" and "footer" section and one link in second card in "projects" section and one more in "about" section)
+#link__properties__global {
     color: $link-color;
     text-decoration: underline;
-}
 
-.link-hover-gradient {
-    background: radial-gradient(circle, $link-hover-gradient-1 0%, $link-hover-gradient-2 16%,
-            $link-hover-gradient-3 32%, $link-hover-gradient-4 49%, $link-hover-gradient-3 66%,
-            $link-hover-gradient-2 84%, $link-hover-gradient-1 100%);
+    &:hover {
+    background: radial-gradient(circle, $link-hover-gradient-1 0%, 
+    $link-hover-gradient-2 16%, $link-hover-gradient-3 32%, 
+    $link-hover-gradient-4 49%, $link-hover-gradient-3 66%, 
+    $link-hover-gradient-2 84%, $link-hover-gradient-1 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -137,12 +135,43 @@ img {
     @keyframes gradient {
         0% {
             background-position: 0%;
-        }
+            }
 
         100% {
             background-position: 100%;
+            }
         }
     }
 }
 
-// JavaScript appear effect class for about section is here 
+
+// Header section special properties for JavaScript appear effect
+.revealHeaderJS{
+    position: relative;
+    transform: translateX(-3rem);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    filter: blur(5px);
+}
+.revealHeaderJS.active{
+    transform: translateX(0rem);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+
+// About section special properties for JavaScript appear effect
+.revealAboutJS{
+    position: relative;
+    transform: translateY(3rem);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    filter: blur(5px);
+  }
+
+.revealAboutJS.active{
+    transform: translateY(0rem);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  

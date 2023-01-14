@@ -12,9 +12,9 @@ PARTIALS
   scroll-behavior: smooth;
   list-style-type: none;
   text-decoration: none;
-  transition: all 0.2s ease-in;
   outline: none;
   border: none;
+  transition: 0.2s all ease-in-out;
 }
 
 body {
@@ -30,7 +30,7 @@ img {
   vertical-align: middle;
 }
 
-.btn {
+.btn__global {
   border-radius: 50px;
   display: flex;
   justify-content: center;
@@ -39,10 +39,9 @@ img {
   gap: 0;
   position: relative;
   overflow: hidden;
-  transition: all 300ms ease-in-out;
   background-color: #FFC654;
 }
-.btn::after {
+.btn__global::after {
   position: absolute;
   display: block;
   content: "";
@@ -51,12 +50,12 @@ img {
   left: -300%;
   transform: rotate(45deg);
   background-color: #F7B42D;
-  transition: all 0.2s ease-in;
+  transition: all 0.3s ease-in-out;
 }
-.btn:hover::after {
+.btn__global:hover::after {
   left: -100%;
 }
-.btn a {
+.btn__global a {
   z-index: 30;
   padding: 9px 0;
   width: 10rem;
@@ -70,10 +69,10 @@ img {
   border-radius: 50px;
   font-size: 0.85rem;
 }
-.btn a:hover {
+.btn__global a:hover {
   border: 1px solid #F7B42D;
 }
-.btn a:focus {
+.btn__global a:focus {
   border: 1px solid dimgray;
 }
 
@@ -93,7 +92,7 @@ img {
   display: flex;
 }
 
-#section__title {
+#section__title__global {
   font-size: 3rem;
   text-align: center;
   font-family: "PT Sans Caption", sans-serif;
@@ -103,7 +102,7 @@ img {
   width: fit-content;
   margin: 7rem auto 3rem auto;
 }
-#section__title::after {
+#section__title__global::after {
   content: "";
   position: absolute;
   top: auto;
@@ -116,12 +115,11 @@ img {
   transform: translate(-50%);
 }
 
-.link-properties, .projects__wrapper .projects__item-global .projects__text .projects__p .projects__a, .about__wrapper .about__content .about__item .about__desc .about__link {
+#link__properties__global {
   color: #2E72B2;
   text-decoration: underline;
 }
-
-.link-hover-gradient, .projects__wrapper .projects__item-global .projects__text .projects__p .projects__a:hover, .about__wrapper .about__content .about__item .about__desc .about__link:hover {
+#link__properties__global:hover {
   background: radial-gradient(circle, #2E72B2 0%, #3C87CD 16%, #D8AD48 32%, #F7B42D 49%, #D8AD48 66%, #3C87CD 84%, #2E72B2 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -136,6 +134,34 @@ img {
   100% {
     background-position: 100%;
   }
+}
+
+.revealHeaderJS {
+  position: relative;
+  transform: translateX(-3rem);
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  filter: blur(5px);
+}
+
+.revealHeaderJS.active {
+  transform: translateX(0rem);
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.revealAboutJS {
+  position: relative;
+  transform: translateY(3rem);
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  filter: blur(5px);
+}
+
+.revealAboutJS.active {
+  transform: translateY(0rem);
+  opacity: 1;
+  filter: blur(0px);
 }
 
 .nav {
@@ -198,7 +224,7 @@ img {
   height: 5%;
   z-index: -10;
   transform: scale(0);
-  transition: 0.2s ease-in;
+  transition: 0.3s ease-in-out;
 }
 .nav__wrapper .nav__list .nav__item:hover::before {
   transform: scale(1);
@@ -368,8 +394,8 @@ img {
   flex-flow: column nowrap;
   gap: 4rem;
   padding: 2.5rem 0rem;
-  background: url("../../assets/img/skills-imgs/skills-bkgr.jpg") no-repeat center/cover;
-  background-attachment: fixed;
+  background: url("../../assets/img/skills-imgs/skills-bkgr.jpg") no-repeat center;
+  transition: all 0s linear;
 }
 .skills__wrapper {
   justify-content: center;
@@ -558,7 +584,7 @@ img {
   bottom: auto;
   left: 0%;
   background-color: #FFC654;
-  height: 8%;
+  height: 10%;
   width: 5rem;
 }
 .footer__wrapper .footer__item.footer__item__one input {
@@ -577,13 +603,14 @@ img {
   width: 100%;
 }
 .footer__wrapper .footer__item.footer__item__one .footer__btn {
-  width: 8rem;
+  width: 7.6rem;
+  padding: 1px 0;
   cursor: pointer;
-  border: 2px solid #FFC654;
+  border: 1px solid #FFC654;
   margin-top: 1rem;
 }
 .footer__wrapper .footer__item.footer__item__one .footer__btn:focus {
-  border: 2px solid dimgray;
+  border: 1px solid dimgray;
 }
 .footer__wrapper .footer__item.footer__item__one .footer__btn span {
   padding: 8px 0;

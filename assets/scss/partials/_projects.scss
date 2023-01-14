@@ -63,14 +63,6 @@
 
                 .projects__p {
                     margin: 1.3rem 0 3rem 0;
-
-                    .projects__a {
-                        @extend .link-properties;
-
-                        &:hover {
-                            @extend .link-hover-gradient;
-                        }
-                    }
                 }
 
                 .projects__btn__container {

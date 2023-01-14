@@ -32,7 +32,7 @@
                     content: '';
                     @include position(absolute, 120%, auto, auto, 0%);
                     background-color: $yellow;
-                    height: 8%;
+                    height: 10%;
                     width: 5rem;
                 }
             }
@@ -57,13 +57,14 @@
                 }
 
                 .footer__btn {
-                    width: 8rem;
+                    width: 7.6rem;
+                    padding: 1px 0;
                     cursor: pointer;
-                    border: 2px solid $yellow;
+                    border: 1px solid $yellow;
                     margin-top: 1rem;
 
                     &:focus {
-                        border: 2px solid dimgray;
+                        border: 1px solid dimgray;
                     }
 
                     span {

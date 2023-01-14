@@ -2,8 +2,9 @@
 .skills {
     @include flex(center, center, column nowrap, 4rem);
     padding: 2.5rem 0rem;
-    background: url('../../assets/img/skills-imgs/skills-bkgr.jpg') no-repeat center / cover;
-    background-attachment: fixed;
+    background: url('../../assets/img/skills-imgs/skills-bkgr.jpg') no-repeat center;
+    transition: all 0s linear;
+
     
     &__wrapper {
         justify-content: center;
