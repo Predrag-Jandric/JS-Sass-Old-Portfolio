@@ -1,4 +1,13 @@
 
+// modules used
+@use '../modules/global' as *;
+@use '../modules/mixins' as *;
+@use '../modules/variables' as *; 
+
+/*-------------------------------
+        PROJECTS SECTION
+-------------------------------*/
+
 .projects {
     text-align: center;
     @include flex(center, flex-start, row nowrap, 0);

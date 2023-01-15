@@ -1,8 +1,21 @@
+
+// modules used
+@use '../modules/global' as *;
+@use '../modules/mixins' as *;
+@use '../modules/variables' as *; 
+
+/*-------------------------------
+        HEADER SECTION
+-------------------------------*/
+
 .header {
     height: 90vh;
     position: relative;
-    background: url('../../assets/img/hero-bg.jpg') no-repeat center / cover, linear-gradient(to right, black, black);
+    background: url('../../assets/img/hero-bg.jpg') no-repeat center / cover;
     background-position-y: 100%;
+
+    
+    
  
     @media(max-width:768px){
         @include flex(center, center, column nowrap, 0);

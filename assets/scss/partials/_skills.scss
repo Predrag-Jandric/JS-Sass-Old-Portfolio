@@ -1,4 +1,13 @@
 
+// modules used
+@use '../modules/global' as *;
+@use '../modules/mixins' as *;
+@use '../modules/variables' as *; 
+
+/*-------------------------------
+        SKILLS SECTION
+-------------------------------*/
+
 .skills {
     @include flex(center, center, column nowrap, 4rem);
     padding: 2.5rem 0rem;

@@ -1,9 +1,18 @@
 
+// modules used
+@use '../modules/global' as *;
+@use '../modules/mixins' as *;
+@use '../modules/variables' as *; 
+
+/*-------------------------------
+        FOOTER SECTION
+-------------------------------*/
+
 .footer {
     @include flex(center, center, column nowrap, 0);
     background: url('../../assets/img/footer-bg.jpg') no-repeat center / cover;
     background-attachment: fixed;
-    padding: 6rem 0;
+    padding: 6rem 0 3rem 0;
     color: $gray-text;
     margin-top: 7rem;
 

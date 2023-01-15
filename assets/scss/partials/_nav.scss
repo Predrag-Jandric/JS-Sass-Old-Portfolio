@@ -1,3 +1,13 @@
+
+// modules used
+@use '../modules/global' as *;
+@use '../modules/mixins' as *;
+@use '../modules/variables' as *; 
+
+/*-------------------------------
+        NAV SECTION
+-------------------------------*/
+
 .nav {
     background-color: #21262c;
     padding: 15px 0;
@@ -15,7 +25,6 @@
                 width: 70px;
                 height: 70px;
                 border-radius: 5px;
-                margin-top: 8px;
             }
         }
 
@@ -77,6 +86,11 @@
         display: none;
         color: $white;
         cursor: pointer;
+        
+        &:hover {
+            transform: rotate(180deg);
+            color: $yellow;
+        }
 
         @media(max-width:992px) {
             display: block;

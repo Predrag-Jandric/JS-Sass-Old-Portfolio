@@ -1,4 +1,6 @@
 
+// MIXINS MODULE
+
 @mixin flex($justify: flex-start, $align: center, $flow: row nowrap, $gap: 0) {
     display: flex;
     justify-content: $justify;
@@ -7,12 +9,6 @@
     gap: $gap;
 }
 
-// @mixin text($color, $fontSize, $fontWeight,) {
-//     color: $color;
-//     font-size: $fontSize;
-//     font-weight: $fontWeight;
-// }
-
 @mixin position($position, $top: auto, $right: auto, $bottom: auto, $left: auto) {
     position: $position;
     top: $top;
@@ -20,6 +16,3 @@
     bottom: $bottom;
     left: $left;
 }
-
-
-// add mixin za border radius i border i box shadow, event color i font weight
