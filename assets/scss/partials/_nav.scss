@@ -31,7 +31,7 @@
         .nav__list {
             display: flex;
 
-            @media(max-width:992px) {
+            @media(max-width:768px) {
                 @include position(absolute, 100%, 0, auto, 0);
                 background-color: #21262c;
                 @include flex(flex-start, center, column nowrap, 1rem);
@@ -92,7 +92,7 @@
             color: $yellow;
         }
 
-        @media(max-width:992px) {
+        @media(max-width:768px) {
             display: block;
         }
     }

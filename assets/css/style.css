@@ -134,7 +134,7 @@ img {
   position: relative;
   transform: translateX(-3rem);
   opacity: 0;
-  transition: all 0.6s ease-in-out;
+  transition: all 1s ease-in-out;
   filter: blur(5px);
 }
 
@@ -184,7 +184,7 @@ img {
 .nav__wrapper .nav__list {
   display: flex;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .nav__wrapper .nav__list {
     position: absolute;
     top: 100%;
@@ -243,7 +243,7 @@ img {
   transform: rotate(180deg);
   color: #FFC654;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .nav .nav__btn {
     display: block;
   }
@@ -255,8 +255,7 @@ img {
 .header {
   height: 90vh;
   position: relative;
-  background: url("../../assets/img/hero-bg.jpg") no-repeat center/cover;
-  background-position-y: 100%;
+  background: url("../../assets/img/header-imgs/header-bg.jpg") no-repeat center/cover;
 }
 @media (max-width: 768px) {
   .header {
@@ -273,8 +272,7 @@ img {
   right: auto;
   bottom: auto;
   left: 10%;
-  width: 60%;
-  animation: header-slide 0.8s ease-in-out;
+  width: 55%;
 }
 @media (max-width: 768px) {
   .header__wrapper {
@@ -298,8 +296,29 @@ img {
   color: #f1f1f1;
   margin: 1.5rem 0;
 }
-.header__wrapper .header__p .header__span {
-  color: #FFC654;
+.header__wrapper .header__earth, .header__wrapper .header__moon {
+  position: absolute;
+  top: 0%;
+  right: -40%;
+  bottom: auto;
+  left: auto;
+  width: 30%;
+  z-index: -10;
+  object-fit: contain;
+  transition: position 0s;
+}
+@media (max-width: 768px) {
+  .header__wrapper .header__earth, .header__wrapper .header__moon {
+    display: none;
+  }
+}
+.header__wrapper .header__moon {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  bottom: auto;
+  left: auto;
+  width: 3%;
 }
 
 /*-------------------------------
@@ -515,16 +534,16 @@ img {
   border-radius: 5px;
 }
 .projects__wrapper .projects__item-global .projects__one__img {
-  background: url("../../assets/img/projects-imgs/projects__one__img.png") no-repeat center/cover;
+  background: url("../../assets/img/projects-imgs/card-one.png") no-repeat center/cover;
 }
 .projects__wrapper .projects__item-global .projects__two__img {
-  background: url("../../assets/img/projects-imgs/projects__two__img.png") no-repeat center/cover;
+  background: url("../../assets/img/projects-imgs/card-two.png") no-repeat center/cover;
 }
 .projects__wrapper .projects__item-global .projects__three__img {
-  background: url("../../assets/img/projects-imgs/projects__three__img.png") no-repeat center/cover;
+  background: url("../../assets/img/projects-imgs/card-three.png") no-repeat center/cover;
 }
 .projects__wrapper .projects__item-global .projects__four__img {
-  background: url("../../assets/img/projects-imgs/projects__four__img.png") no-repeat center/cover;
+  background: url("../../assets/img/projects-imgs/card-four.png") no-repeat center/cover;
 }
 .projects__wrapper .projects__item-global .projects__global__img {
   height: 300px;
