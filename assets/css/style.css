@@ -163,7 +163,7 @@ img {
 -------------------------------*/
 .nav {
   background-color: #21262c;
-  padding: 15px 0;
+  padding: 7px 0;
   position: relative;
   z-index: 100;
 }
@@ -177,9 +177,10 @@ img {
   margin: 0px auto;
 }
 .nav__wrapper .nav__logo .nav__image {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   border-radius: 5px;
+  margin: 5px;
 }
 .nav__wrapper .nav__list {
   display: flex;
@@ -256,6 +257,7 @@ img {
   height: 90vh;
   position: relative;
   background: url("../../assets/img/header-imgs/header-bg.jpg") no-repeat center/cover;
+  z-index: 100;
 }
 @media (max-width: 768px) {
   .header {
@@ -303,8 +305,6 @@ img {
   bottom: auto;
   left: auto;
   width: 30%;
-  z-index: -10;
-  object-fit: contain;
   transition: position 0s;
 }
 @media (max-width: 768px) {
@@ -319,6 +319,15 @@ img {
   bottom: auto;
   left: auto;
   width: 3%;
+}
+
+.header__star {
+  background: url("../../assets/img/header-imgs/star.png") no-repeat center/cover;
+  transition: all 0s;
+  width: 5rem;
+  height: 8rem;
+  transform: rotate(-70deg);
+  border: 1px solid yellow;
 }
 
 /*-------------------------------

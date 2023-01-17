@@ -10,7 +10,7 @@
 
 .nav {
     background-color: #21262c;
-    padding: 15px 0;
+    padding: 7px 0;
     position: relative;
     z-index: 100;
 
@@ -22,9 +22,10 @@
         .nav__logo {
 
             .nav__image {
-                width: 70px;
-                height: 70px;
+                width: 65px;
+                height: 65px;
                 border-radius: 5px;
+                margin: 5px;
             }
         }
 

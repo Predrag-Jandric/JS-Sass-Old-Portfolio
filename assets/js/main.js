@@ -28,6 +28,15 @@ document.addEventListener("mousemove", parallax);
     }
   )}
 
+  // Header section star passing across screen scroll parallax effect
+const star = document.getElementById('starParallaxJS');
+
+window.addEventListener('scroll', function() {
+  let scrollY = window.pageYOffset;
+  star.style.backgroundPositionY = -(scrollY * 0.25) + 'px';
+});
+
+
 
 // About section and Footer section scroll appear effect
 window.addEventListener('scroll', revealAbout);
