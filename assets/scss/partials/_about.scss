@@ -23,11 +23,11 @@
         .about__content {
             @include flex(flex-start, flex-start, row nowrap, 3rem);
 
-            @media(max-width:900px) {
+            @media(max-width:1024px) {
                 flex-direction: column;
             }
 
-            @media(max-width:600px) {
+            @media(max-width:480px) {
                 gap: 1.5rem;
             }
 
@@ -41,14 +41,14 @@
                         border-radius: 50%;
                     }
 
-                    @media(max-width:600px) {
+                    @media(max-width:480px) {
                         flex-direction: column;
                         margin: 0px auto;
                     }
 
                     .about__personal-info {
 
-                        @media(max-width:600px) {
+                        @media(max-width:480px) {
                             text-align: center;
                         }
 
@@ -68,7 +68,7 @@
                     font-family: $headers-font;
                     font-size: 1.3rem;
 
-                    @media(max-width:600px) {
+                    @media(max-width:480px) {
                         text-align: center;
                     }
                 }
@@ -76,7 +76,7 @@
                 .about__desc {
                     line-height: 1.5;
 
-                    @media(max-width:600px) {
+                    @media(max-width:480px) {
                         text-align: center;
                     }
                 }

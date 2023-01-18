@@ -10,6 +10,8 @@ PARTIALS
 @use 'partials/projects';
 @use 'partials/footer';
 
+@use 'partials/thankYou';
+
 
 // to start sass, type in the terminal: 
 
@@ -18,9 +20,6 @@ PARTIALS
 // it will compile this main sass file (style.scss) in which 
 // are all the partials (which are using modules), into normal
 // css which is in assets/css
-
-
-// fix form fonts not equal size !!!
 
 
 

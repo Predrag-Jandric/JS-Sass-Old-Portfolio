@@ -14,7 +14,6 @@
     background: url('../../assets/img/header-imgs/header-bg.jpg') no-repeat center / cover;
     z-index: 100;
     overflow: hidden;
-    // transition: all 0s;
 
     @media(max-width:768px){
         @include flex(center, center, column nowrap, 0);
@@ -35,7 +34,6 @@
             color: $yellow;
             font-size: clamp(2.5rem, 2.7vw, 8rem);
             font-family: $headers-font;
-            // transition: all 0s;
         }
 
         .header__p {

@@ -38,7 +38,7 @@ window.addEventListener('scroll', function(){
 })
 
 
-// About section and Footer section appear effect on scroll 
+// About, Footer and Projects sections appear effect on scroll 
 window.addEventListener('scroll', revealAbout);
 
   function revealAbout(){
@@ -47,7 +47,7 @@ window.addEventListener('scroll', revealAbout);
     for(var i = 0; i < reveals.length; i++){
       var windowheight = window.innerHeight;
       var revealtop = reveals[i].getBoundingClientRect().top;
-      var revealpoint = 150;
+      var revealpoint = 200;
       if(revealtop < windowheight - revealpoint){
         reveals[i].classList.add('active');
       }

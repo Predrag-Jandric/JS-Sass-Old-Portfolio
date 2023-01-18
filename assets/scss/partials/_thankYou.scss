@@ -1,0 +1,40 @@
+
+// modules used
+@use '../modules/global' as *;
+@use '../modules/mixins' as *;
+@use '../modules/variables' as *; 
+
+/*---------------------------------
+    STYLING FOR "thankYou.html"
+---------------------------------*/
+
+.thankYou__wrapper {
+    @include flex(center, center, column nowrap, 0rem);
+
+    .thankYou__header {
+        @include flex(center, center, column nowrap, 0rem);
+        background-color: $pure-white;
+        padding: 3rem;
+        width: 27rem;
+        margin: 3rem 2rem;
+        color: $gray-text;
+        box-shadow: $box-shadow;
+        border-radius: 5px;
+    
+        @media(max-width:480px){
+            padding: 3rem 2rem;
+            margin: 3rem 1rem;
+            width: 90%;
+        }
+    
+        .thankYou__h1 {
+            font-size: 1.7rem;
+            font-family: $headers-font;
+        }
+    
+        .thankYou__p{
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+

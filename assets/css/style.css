@@ -165,7 +165,7 @@ img {
   background-color: #21262c;
   padding: 7px 0;
   position: relative;
-  z-index: 100;
+  z-index: 200;
 }
 .nav__wrapper {
   display: flex;
@@ -363,12 +363,12 @@ img {
   flex-flow: row nowrap;
   gap: 3rem;
 }
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .about__wrapper .about__content {
     flex-direction: column;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .about__wrapper .about__content {
     gap: 1.5rem;
   }
@@ -384,13 +384,13 @@ img {
   width: 10rem;
   border-radius: 50%;
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .about__wrapper .about__content .about__item:first-child {
     flex-direction: column;
     margin: 0px auto;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .about__wrapper .about__content .about__item:first-child .about__personal-info {
     text-align: center;
   }
@@ -407,7 +407,7 @@ img {
   font-family: "PT Sans Caption", sans-serif;
   font-size: 1.3rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .about__wrapper .about__content .about__item .about__title {
     text-align: center;
   }
@@ -415,7 +415,7 @@ img {
 .about__wrapper .about__content .about__item .about__desc {
   line-height: 1.5;
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .about__wrapper .about__content .about__item .about__desc {
     text-align: center;
   }
@@ -439,7 +439,6 @@ img {
   gap: 4rem;
   padding: 2.5rem 0rem;
   background: url("../../assets/img/skills-imgs/skills-bkgr.jpg") no-repeat center;
-  transition: all 0s linear;
 }
 .skills__wrapper {
   justify-content: center;
@@ -449,7 +448,7 @@ img {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .skills__wrapper {
     grid-template-columns: repeat(4, 1fr);
     width: 700px;
@@ -475,10 +474,10 @@ img {
   width: 115px;
   height: 115px;
 }
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .skills__wrapper .skills__card .skills__global {
-    width: 85px;
-    height: 85px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -615,7 +614,7 @@ img {
   margin: 0 2rem;
   box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .footer__wrapper {
     flex-direction: column;
   }
@@ -651,6 +650,7 @@ img {
   border: 1px #4d5055 solid;
   padding: 10px;
   width: 100%;
+  font-size: 0.9rem;
 }
 .footer__wrapper .footer__item.footer__item__one .footer__btn {
   width: 7.6rem;
@@ -683,6 +683,45 @@ img {
 }
 .footer__copyright__a:hover {
   color: #F7B42D;
+}
+
+/*---------------------------------
+    STYLING FOR "thankYou.html"
+---------------------------------*/
+.thankYou__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 0rem;
+}
+.thankYou__wrapper .thankYou__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 0rem;
+  background-color: white;
+  padding: 3rem;
+  width: 27rem;
+  margin: 3rem 2rem;
+  color: #4d5055;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+@media (max-width: 480px) {
+  .thankYou__wrapper .thankYou__header {
+    padding: 3rem 2rem;
+    margin: 3rem 1rem;
+    width: 90%;
+  }
+}
+.thankYou__wrapper .thankYou__header .thankYou__h1 {
+  font-size: 1.7rem;
+  font-family: "PT Sans Caption", sans-serif;
+}
+.thankYou__wrapper .thankYou__header .thankYou__p {
+  margin-bottom: 1.5rem;
 }
 
 /*-------------------------------

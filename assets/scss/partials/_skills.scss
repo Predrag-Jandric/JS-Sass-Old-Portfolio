@@ -12,8 +12,6 @@
     @include flex(center, center, column nowrap, 4rem);
     padding: 2.5rem 0rem;
     background: url('../../assets/img/skills-imgs/skills-bkgr.jpg') no-repeat center;
-    transition: all 0s linear;
-
     
     &__wrapper {
         justify-content: center;
@@ -23,7 +21,7 @@
         display: grid;
         grid-template-columns: repeat(8, 1fr); 
 
-        @media(max-width:1400px) {
+        @media(max-width:1200px) {
         grid-template-columns: repeat(4, 1fr);
         width: 700px; 
         }
@@ -44,9 +42,9 @@
                 width: 115px;
                 height: 115px;
             
-                @media(max-width:425px){
-                    width: 85px;
-                    height: 85px;
+                @media(max-width:480px){
+                    width: 80px;
+                    height: 80px;
                 }
             }
         }
