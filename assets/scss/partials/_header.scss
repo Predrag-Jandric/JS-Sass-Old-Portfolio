@@ -13,6 +13,8 @@
     position: relative;
     background: url('../../assets/img/header-imgs/header-bg.jpg') no-repeat center / cover;
     z-index: 100;
+    overflow: hidden;
+    // transition: all 0s;
 
     @media(max-width:768px){
         @include flex(center, center, column nowrap, 0);
@@ -33,6 +35,7 @@
             color: $yellow;
             font-size: clamp(2.5rem, 2.7vw, 8rem);
             font-family: $headers-font;
+            // transition: all 0s;
         }
 
         .header__p {
@@ -41,38 +44,32 @@
             margin: 1.5rem 0;
         }
 
-
-        // special
-        .header__earth {
-            @include position(absolute, 0%, -40%, auto, auto);
-            width: 30%;
-            // z-index: -10;
-            // object-fit: contain;
+        // planets
+        .header__earth, 
+        .header__moon, 
+        .header__star {
             transition: position 0s;
-        
+
             @media(max-width:768px){
                 display: none;
             }
         }
+
+        .header__earth {
+            @include position(absolute, 0%, -40%, auto, auto);
+            width: 30%;
+        }
         
         .header__moon {
-            @extend .header__earth;
             @include position(absolute, -20%, -10%, auto, auto);
             width: 3%;
         }
 
-
+        .header__star{
+            @include position(absolute, $top: -100%, $right: auto, $bottom: auto, $left: 150%);
+            width: 15rem;
+            z-index: -10;
+        }
     }
 }
 
-.header__star {
-    background: url('../../assets/img/header-imgs/star.png') no-repeat center / cover;
-    transition: all 0s;
-    width: 5rem;
-    height: 8rem;
-    transform: rotate(-70deg);
-    border: 1px solid yellow;
-    // @include position(absolute, 50%, -60%, auto, auto);
-    // z-index: -10;
-    // object-fit: contain;
-}

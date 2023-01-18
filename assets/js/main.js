@@ -1,21 +1,20 @@
 
 // Open/close mobile menu
-const navBtn = document.getElementById("hamburger");
-const navList = document.getElementById('nav-list');
+const navBtn = document.getElementById("hamburgerJS");
+const navList = document.querySelector('.nav__list');
 
 navBtn.addEventListener('click', () => {
     navList.classList.toggle('show');
+    console.log('heloo');
 });
 
 
 // Header section appear effect, immediately upon entering site
-var reveals = document.querySelectorAll('.revealHeaderJS');
-  reveals.forEach(function(e){
-    e.classList.add('active');
-  });
+var reveal = document.querySelector('.revealHeaderJS');
+  reveal.classList.add('active');
 
 
-// Header mouse move parallax effect
+// Header parallax effect on mouse move for planets 
 document.addEventListener("mousemove", parallax);
   function parallax(e){
     document.querySelectorAll(".mouseMoveParallaxJS").forEach(function(move){
@@ -26,19 +25,20 @@ document.addEventListener("mousemove", parallax);
 
     move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
     }
-  )}
-
-  // Header section star passing across screen scroll parallax effect
-const star = document.getElementById('starParallaxJS');
-
-window.addEventListener('scroll', function() {
-  let scrollY = window.pageYOffset;
-  star.style.backgroundPositionY = -(scrollY * 0.25) + 'px';
-});
+)}
 
 
+// Header star passing across screen on scroll parallax effect
+let star = document.querySelector('.starParallaxJS')
 
-// About section and Footer section scroll appear effect
+window.addEventListener('scroll', function(){
+  let value = window.scrollY
+
+  star.style.transform = 'translateY(' + value * 1.5 + 'px) translateX(' + -value * 1.5 + 'px)'
+})
+
+
+// About section and Footer section appear effect on scroll 
 window.addEventListener('scroll', revealAbout);
 
   function revealAbout(){
@@ -55,13 +55,13 @@ window.addEventListener('scroll', revealAbout);
       // else{
       //   reveals[i].classList.remove('active');
       // }
-    }}
+}}
 
 
-// Skills section scroll parallax effect
+// Skills section parallax effect on scroll for bg image 
 const skillsSection = document.getElementById('parallaxJS');
 
   window.addEventListener('scroll', function() {
     let scrollY = window.pageYOffset;
     skillsSection.style.backgroundPositionY = -(scrollY * 0.25) + 'px';
-  });
+});

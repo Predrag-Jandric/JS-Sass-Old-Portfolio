@@ -258,6 +258,7 @@ img {
   position: relative;
   background: url("../../assets/img/header-imgs/header-bg.jpg") no-repeat center/cover;
   z-index: 100;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .header {
@@ -298,19 +299,25 @@ img {
   color: #f1f1f1;
   margin: 1.5rem 0;
 }
-.header__wrapper .header__earth, .header__wrapper .header__moon {
+.header__wrapper .header__earth,
+.header__wrapper .header__moon,
+.header__wrapper .header__star {
+  transition: position 0s;
+}
+@media (max-width: 768px) {
+  .header__wrapper .header__earth,
+.header__wrapper .header__moon,
+.header__wrapper .header__star {
+    display: none;
+  }
+}
+.header__wrapper .header__earth {
   position: absolute;
   top: 0%;
   right: -40%;
   bottom: auto;
   left: auto;
   width: 30%;
-  transition: position 0s;
-}
-@media (max-width: 768px) {
-  .header__wrapper .header__earth, .header__wrapper .header__moon {
-    display: none;
-  }
 }
 .header__wrapper .header__moon {
   position: absolute;
@@ -320,14 +327,14 @@ img {
   left: auto;
   width: 3%;
 }
-
-.header__star {
-  background: url("../../assets/img/header-imgs/star.png") no-repeat center/cover;
-  transition: all 0s;
-  width: 5rem;
-  height: 8rem;
-  transform: rotate(-70deg);
-  border: 1px solid yellow;
+.header__wrapper .header__star {
+  position: absolute;
+  top: -100%;
+  right: auto;
+  bottom: auto;
+  left: 150%;
+  width: 15rem;
+  z-index: -10;
 }
 
 /*-------------------------------
