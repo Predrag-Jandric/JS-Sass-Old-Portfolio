@@ -104,5 +104,21 @@ const skillsSection = document.getElementById('parallaxJS');
 });
 
 
+/*-------------------------------
+    CONCERNING PRE LOADER
+-------------------------------*/
+
+let preloader = document.getElementById("preloaderJS");
+let loadingAnimation = document.querySelector(".loading-animation");
+
+  // listen for the page to finish loading
+  window.addEventListener("load", function() {
+    preloader.style.display = "none";
+  });
+
+  // change the last value from "none" to "flex" in order to 
+  // see the animation and be able to style it
+
+
 
 
