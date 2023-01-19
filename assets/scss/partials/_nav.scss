@@ -31,6 +31,7 @@
 
         .nav__list {
             display: flex;
+            transition: 0.2s all ease-in-out;
 
             @media(max-width:768px) {
                 @include position(absolute, 100%, 0, auto, 0);

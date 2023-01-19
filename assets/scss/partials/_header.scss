@@ -46,7 +46,6 @@
         .header__earth, 
         .header__moon, 
         .header__star {
-            transition: position 0s;
 
             @media(max-width:768px){
                 display: none;

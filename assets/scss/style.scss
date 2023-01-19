@@ -1,6 +1,6 @@
 
 /*-------------------------------
-PARTIALS
+            PARTIALS
 -------------------------------*/
 
 @use 'partials/nav';
@@ -10,15 +10,17 @@ PARTIALS
 @use 'partials/projects';
 @use 'partials/footer';
 
+// styling for html page with the same name
 @use 'partials/thankYou';
 
-// to start sass, type in the terminal: 
+
+// to start sass and be able to make edits, type in the terminal: 
 
 // sass --watch assets\scss\style.scss:assets\css\style.css
 
 // it will compile this main sass file (style.scss) in which 
 // are all the partials (which are using modules), into normal
-// css which is in assets/css
+// css which is in assets/css and that browser can understand
 
 
 

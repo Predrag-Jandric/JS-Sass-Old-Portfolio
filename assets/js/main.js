@@ -1,5 +1,9 @@
 
-// Open/close mobile menu
+/*-------------------------------
+    CONCERNING NAVBAR SECTION
+-------------------------------*/
+
+// Open/close mobile menu nav bar
 const navBtn = document.getElementById("hamburgerJS");
 const navList = document.querySelector('.nav__list');
 
@@ -8,6 +12,31 @@ navBtn.addEventListener('click', () => {
     console.log('heloo');
 });
 
+// Link anchor points jumping upon click in nav bar
+document.getElementById("aboutAnchorJS").addEventListener("click", function(event) {
+  event.preventDefault();
+  let aboutSection = document.querySelector(".about");
+  let aboutSectionPosition = aboutSection.getBoundingClientRect().top;
+  let adjustedPosition = aboutSectionPosition - 220; // adjust the position by the amount of the margin
+  window.scrollTo({
+    top: adjustedPosition
+  });
+});
+
+document.getElementById("projectsAnchorJS").addEventListener("click", function(event) {
+  event.preventDefault();
+  let projectsSection = document.querySelector(".projects");
+  let projectsSectionPosition = projectsSection.getBoundingClientRect().top;
+  let adjustedPosition = projectsSectionPosition - 200; // adjust the position by the amount of the margin
+  window.scrollTo({
+    top: adjustedPosition
+  });
+});
+
+
+/*-------------------------------
+    CONCERNING HEADER SECTION
+-------------------------------*/
 
 // Header section appear effect, immediately upon entering site
 var reveal = document.querySelector('.revealHeaderJS');
@@ -38,6 +67,10 @@ window.addEventListener('scroll', function(){
 })
 
 
+/*-------------------------------
+  CONCERNING MULTIPLE SECTIONS
+-------------------------------*/
+
 // About, Footer and Projects sections appear effect on scroll 
 window.addEventListener('scroll', revealAbout);
 
@@ -58,6 +91,10 @@ window.addEventListener('scroll', revealAbout);
 }}
 
 
+/*-------------------------------
+    CONCERNING SKILLS SECTION
+-------------------------------*/
+
 // Skills section parallax effect on scroll for bg image 
 const skillsSection = document.getElementById('parallaxJS');
 
@@ -65,3 +102,7 @@ const skillsSection = document.getElementById('parallaxJS');
     let scrollY = window.pageYOffset;
     skillsSection.style.backgroundPositionY = -(scrollY * 0.25) + 'px';
 });
+
+
+
+

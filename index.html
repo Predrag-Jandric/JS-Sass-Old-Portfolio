@@ -25,9 +25,9 @@
         <div class="nav__wrapper">
             <a href="index.html" class="nav__logo"><img src="assets/img/logo.png" alt="logo img" class="nav__image"></a>
             <ul class="nav__list">
-                <li class="nav__item"><a href="#about" class="nav__link">about</a></li>
-                <li class="nav__item"><a href="#projects" class="nav__link">projects</a></li>
-                <li class="nav__item"><a href="#footer" class="nav__link">contact</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" id="aboutAnchorJS">about</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" id="projectsAnchorJS" >projects</a></li>
+                <li class="nav__item"><a href="#contactAnchor" class="nav__link">contact</a></li>
             </ul>
             <svg class="nav__btn" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                 class="bi bi-list" viewBox="0 0 16 16" id="hamburgerJS">
@@ -70,7 +70,7 @@
     
 
     <!-- About section start -->
-    <section class="about" id="about">
+    <section class="about">
         <div class="about__wrapper revealSectionJS">
             <div class="about__content">
                 <article class="about__item">
@@ -144,7 +144,7 @@
 
 
     <!-- Projects section start -->
-    <section class="projects" id="projects">
+    <section class="projects">
         <div class="projects__wrapper revealSectionJS">
 
             <article class="projects__item-global">
@@ -222,10 +222,9 @@
 
 
     <!-- Footer section start -->
-    <footer class="footer">
+    <footer class="footer" id="contactAnchor">
         <div class="footer__wrapper revealSectionJS">
-
-            <form class="footer__item footer__item__one" id="myform" action="https://formsubmit.co/predrag.jandric.bg@gmail.com" method="POST">
+            <form class="footer__item footer__item__one" id="myform" action="https://formsubmit.co/predrag.jandric.bg@gmail.com" method="POST"/>
                 <h3 class="footer__title">Message Me</h3>
                 <input type="text" name="name" placeholder="Your name" required>
                 <input type="email" name="email" placeholder="Email Address" required>
@@ -236,7 +235,7 @@
                     <input type="submit" value="Submit form!" />
                 </noscript>
                 <!-- captcha disable and thank you page -->
-                <input type="hidden" name="_next" value="https://jade-baklava-67de14.netlify.app/assets/thank-you-page.html">
+                <input type="hidden" name="_next" value="thankYou.html">
                 <input type="hidden" name="_captcha" value="false">
             </form>
 

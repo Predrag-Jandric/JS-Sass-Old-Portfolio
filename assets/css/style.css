@@ -8,7 +8,6 @@
   text-decoration: none;
   outline: none;
   border: none;
-  transition: 0.2s all ease-in-out;
 }
 
 body {
@@ -76,6 +75,7 @@ img {
 }
 .icons__global a {
   border-radius: 50px;
+  transition: 0.2s all ease-in-out;
 }
 .icons__global a:hover {
   transform: scale(1.3);
@@ -184,6 +184,7 @@ img {
 }
 .nav__wrapper .nav__list {
   display: flex;
+  transition: 0.2s all ease-in-out;
 }
 @media (max-width: 768px) {
   .nav__wrapper .nav__list {
@@ -298,11 +299,6 @@ img {
   font-size: clamp(1.3rem, 1.3vw, 2rem);
   color: #f1f1f1;
   margin: 1.5rem 0;
-}
-.header__wrapper .header__earth,
-.header__wrapper .header__moon,
-.header__wrapper .header__star {
-  transition: position 0s;
 }
 @media (max-width: 768px) {
   .header__wrapper .header__earth,
@@ -725,7 +721,7 @@ img {
 }
 
 /*-------------------------------
-PARTIALS
+            PARTIALS
 -------------------------------*/
 
 /*# sourceMappingURL=style.css.map */
