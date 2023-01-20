@@ -109,7 +109,6 @@ const skillsSection = document.getElementById('parallaxJS');
 -------------------------------*/
 
 let preloader = document.getElementById("preloaderJS");
-let loadingAnimation = document.querySelector(".loading-animation");
 
   // listen for the page to finish loading
   window.addEventListener("load", function() {
@@ -117,7 +116,7 @@ let loadingAnimation = document.querySelector(".loading-animation");
   });
 
   // change the last value from "none" to "flex" in order to 
-  // see the animation and be able to style it
+  // see the animation forever and be able to style it
 
 
 

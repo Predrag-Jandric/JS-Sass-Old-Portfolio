@@ -20,11 +20,6 @@
 
 <body>
      
-    <!-- Preloader -->
-    <div class="preloader" id="preloaderJS">
-        <div class="loading-animation"></div>
-    </div>
-
 
     <!-- Navbar section start -->
     <nav class="nav">
@@ -35,11 +30,12 @@
                 <li class="nav__item"><a href="#" class="nav__link" id="projectsAnchorJS" >projects</a></li>
                 <li class="nav__item"><a href="#contactAnchor" class="nav__link">contact</a></li>
             </ul>
-            <svg class="nav__btn" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                class="bi bi-list" viewBox="0 0 16 16" id="hamburgerJS">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+
+            <svg class="nav__btn" id="hamburgerJS" xmlns="http://www.w3.org/2000/svg" width="40" height="40" 
+                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
+
         </div>
     </nav>
     <!-- Navbar section end -->
@@ -157,14 +153,14 @@
                 <div class="projects__one__img projects__global__img"></div>
 
                 <div class="projects__text">
-                    <h3 class="projects__h3">My Portfolio</h3>
+                    <h3 class="projects__h3">Portfolio</h3>
                     <p class="projects__p">My most ambitions project so far, my Portfolio ! It took me a lot of time to complete, during which the Portfolio went throught many design and code changes. Written is Sass.</p>
                     <div class="projects__btn__container">
                         <button class="btn__global">
                             <a href="https://github.com/PeterJan285/Portfolio--in-progress-" target="blank">Code</a>
                         </button>
                         <button class="btn__global">
-                            <a href="#">Preview</a>
+                            <a href="https://ww.predrag-jandric.com">Preview</a>
                         </button>
                     </div>
                 </div>
@@ -181,7 +177,7 @@
                             <a href="https://github.com/PeterJan285/SASS-valve-clone" target="blank">Code</a>
                         </button>
                         <button class="btn__global">
-                            <a href="https://flourishing-kitsune-4259af.netlify.app/" target="blank">Preview</a>
+                            <a href="https://valve-clone.netlify.app/" target="blank">Preview</a>
                         </button>
                     </div>
                 </div>
@@ -198,7 +194,7 @@
                             <a href="https://github.com/PeterJan285/Bootstrap-climate-webpage" target="blank">Code</a>
                         </button>
                         <button class="btn__global">
-                            <a href="https://jade-daifuku-8d3a28.netlify.app/" target="blank">Preview</a>
+                            <a href="https://bootstrap-climate-webpage-page.netlify.app/" target="blank">Preview</a>
                         </button>
                     </div>
                 </div>
@@ -241,7 +237,7 @@
                     <input type="submit" value="Submit form!" />
                 </noscript>
                 <!-- captcha disable and thank you page -->
-                <input type="hidden" name="_next" value="predrag-jandric.com/thankYou.html">
+                <input type="hidden" name="_next" value="https://www.predrag-jandric.com/thankYou.html">
                 <input type="hidden" name="_captcha" value="false">
             </form>
 
@@ -268,6 +264,15 @@
         </div>
     </footer>
     <!-- Footer section end -->
+
+
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloaderJS">
+        <img class="preloader__animation" src="assets/img/preloader-animation.gif" alt="image missing">
+        <h1 class="preloader__h1">Loading...</h1>
+    </div>
+
 
 
     <!-- Custom JS -->

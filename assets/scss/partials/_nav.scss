@@ -88,6 +88,7 @@
         display: none;
         color: $white;
         cursor: pointer;
+        transition: 0.3s ease-in-out;
         
         &:hover {
             transform: rotate(180deg);
