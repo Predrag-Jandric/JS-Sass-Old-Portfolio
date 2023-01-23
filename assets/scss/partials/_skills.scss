@@ -15,7 +15,7 @@
     
     &__wrapper {
         justify-content: center;
-        width: 900px;
+        width: 56.25rem;
         gap: 1.5rem; 
         font-size: 1.1rem;
         display: grid;
@@ -23,12 +23,12 @@
 
         @media(max-width:1200px) {
         grid-template-columns: repeat(4, 1fr);
-        width: 700px; 
+        width: 43.75rem; 
         }
 
         @media(max-width:768px) {
         grid-template-columns: repeat(2, 1fr); 
-        width: 300px;
+        width: 18.75rem;
         }
 
         .skills__card {
@@ -39,12 +39,10 @@
             }
 
             .skills__global {
-                width: 115px;
-                height: 115px;
+                @include width-height(7rem, 7rem);
             
                 @media(max-width:480px){
-                    width: 80px;
-                    height: 80px;
+                    @include width-height(5rem, 5rem);
                 }
             }
         }

@@ -13,11 +13,10 @@
     color: $gray-text;
 
     &__wrapper {
+        @include margin-padding(0 2rem, 2.5rem);
         background-color: $pure-white;
         box-shadow: $box-shadow;
-        margin: 0 2rem;
         border-radius: 5px;
-        padding: 2.5rem;
         max-width: 70rem;
 
         .about__content {
@@ -64,9 +63,8 @@
                 }
 
                 .about__title {
+                    @include text(1.3rem, auto, $headers-font);
                     margin-bottom: 1rem;
-                    font-family: $headers-font;
-                    font-size: 1.3rem;
 
                     @media(max-width:480px) {
                         text-align: center;
@@ -84,8 +82,7 @@
         }
 
         .about__btn {
-            margin: 0 auto;
-            margin-top: 2.5rem;
+            margin: 2.5rem auto 0 auto;
 
             a {
                 width: 15rem;

@@ -8,8 +8,7 @@
 // titles, and hover effects are stored here
 
 * {
-    padding: 0;
-    margin: 0;
+    @include margin-padding(0, 0);
     box-sizing: border-box;
     font-family: $text-font;
     scroll-behavior: smooth;
@@ -35,19 +34,17 @@ img {
 
 // all yellow btns and their hovers
 .btn__global {
-    border-radius: 50px;
     @include flex(center);
+    border-radius: 3.125rem;
     position: relative;
     overflow: hidden;
     background-color: $yellow;
 
     &::after {
-        position: absolute;
-        display: block;
+        @include position(absolute, auto, auto, auto, -300%);
+        @include width-height(300%, 550%);
         content: "";
-        width: 300%;
-        height: 550%;
-        left: -300%;
+        display: block;
         transform: rotate(45deg);
         background-color: $hover-yellow;
         transition: all 0.3s ease-in-out;
@@ -60,14 +57,11 @@ img {
     }
 
     a {
+        @include flex(center);
+        @include text(0.85rem, $gray-text, $text-font, normal, 3.125rem, 1px solid $yellow);
         z-index: 30;
         padding: 9px 0;
         width: 10rem;
-        @include flex(center);
-        color: $gray-text;
-        border: 1px solid $yellow;
-        border-radius: 50px;
-        font-size: 0.85rem;
 
         &:hover {
             border: 1px solid $hover-yellow;
@@ -95,8 +89,7 @@ img {
     }
 
     img {
-        width: 45px;
-        height: 45px;
+        @include width-height(2.813rem, 2.813rem);
         display: flex;
     }
 }
@@ -104,10 +97,8 @@ img {
 
 // every section title (about, skills, projects, testimonials)
 #section__title__global {
-    font-size: 3rem;
+    @include text(3rem, $gray-text, $headers-font);
     text-align: center;
-    font-family: $headers-font;
-    color: $gray-text;
     letter-spacing: 2px;
     position: relative;
     width: fit-content;
@@ -117,9 +108,8 @@ img {
     &::after {
         content: '';
         @include position(absolute, auto, auto, -20%, 50%);
+        @include width-height(5rem, 8%);
         background-color: $yellow;
-        height: 8%;
-        width: 5rem;
         transform: translate(-50%);
     }
 }
@@ -188,8 +178,7 @@ img {
 .preloader {
     @include position(fixed, 0, auto, auto, 0);
     @include flex(center, center, column nowrap, 0);
-    width: 100%;
-    height: 100%;
+    @include width-height(100%, 100%);
     z-index: 99999;
     background-color: #f5f5f5;
     background-attachment: fixed;
@@ -203,9 +192,7 @@ img {
     }
 
     &__h1 {
-        font-family: $headers-font;
-        font-size: clamp(1.3rem, 1.7vw, 2rem);;
-        color: $gray-text;
+        @include text(clamp(1.3rem, 1.7vw, 2rem), $gray-text, $headers-font);
     }
 }
   

@@ -10,19 +10,16 @@
 
 .footer {
     @include flex(center, center, column nowrap, 0);
-    background: url('../../assets/img/footer-bg.jpg') no-repeat center / cover;
-    background-attachment: fixed;
-    padding: 6rem 0 3rem 0;
+    @include margin-padding(7rem 0 0 0, 6rem 0 3rem 0);
+    background: url('../../assets/img/footer-bg.jpg') no-repeat fixed center / cover;
     color: $gray-text;
-    margin-top: 7rem;
 
     &__wrapper {
         @include flex(flex-start, flex-start, row nowrap, 3rem);
+        @include margin-padding(0 2rem, 2.5rem);
         max-width: 70rem;
         background-color: $pure-white;
         border-radius: 5px;
-        padding: 2.5rem;
-        margin: 0 2rem;
         box-shadow: $box-shadow;
 
         @media(max-width:768px){
@@ -32,46 +29,41 @@
         .footer__item {
 
             .footer__title {
-                font-size: 1.5rem;
+                @include text(1.5rem, auto, $headers-font);
                 position: relative;
                 margin-bottom: 2rem;
-                font-family: $headers-font;
 
                 &::after {
                     content: '';
                     @include position(absolute, 120%, auto, auto, 0%);
+                    @include width-height(5rem, 10%);
                     background-color: $yellow;
-                    height: 10%;
-                    width: 5rem;
                 }
             }
 
             &.footer__item__one {
+                flex: 1;
 
                 input {
-                    height: 35px;
+                    @include width-height(100%, 2.188rem);
+                    @include margin-padding(0 0 1rem 0, 10px);
                     border-radius: 5px;
                     border: 1px $gray-text solid;
-                    padding: 10px;
                     display: block;
-                    width: 100%;
-                    margin-bottom: 1rem;
                 }
 
                 textarea {
-                    border-radius: 5px;
-                    border: 1px $gray-text solid;
+                    @include text(0.9rem, auto, $text-font, normal, 5px, 1px $gray-text solid);
                     padding: 10px;
                     width: 100%;
-                    font-size: 0.9rem;
+                    
                 }
 
                 .footer__btn {
+                    @include margin-padding(1rem 0 0 0, 1px 0);
                     width: 7.6rem;
-                    padding: 1px 0;
                     cursor: pointer;
                     border: 1px solid $yellow;
-                    margin-top: 1rem;
 
                     &:focus {
                         border: 1px solid dimgray;
@@ -87,6 +79,7 @@
 
 
             &.footer__item__two {
+                flex: 1.2;
 
                 .footer__social {
                     margin-top: 1rem;
@@ -96,15 +89,13 @@
     }
 
     &__copyright {
+        @include text(0.7rem, $light-gray-text);
         text-align: center;
         margin-top: 1rem;
-        color: $light-gray-text;
-        line-height: 2rem;
-        font-size: 0.9rem;
+        line-height: 1.5rem;
 
         &__a {
-            color: $yellow;
-            font-size: 1.05rem;
+            @include text(1.05rem, $yellow);
 
             &:hover {
                 color: $hover-yellow;

@@ -22,8 +22,7 @@
         .nav__logo {
 
             .nav__image {
-                width: 65px;
-                height: 65px;
+                @include width-height(4.063rem, 4.063rem);
                 border-radius: 5px;
                 margin: 5px;
             }
@@ -35,8 +34,8 @@
 
             @media(max-width:768px) {
                 @include position(absolute, 100%, 0, auto, 0);
-                background-color: #21262c;
                 @include flex(flex-start, center, column nowrap, 1rem);
+                background-color: #21262c;
                 padding: 1rem 0;
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             }
@@ -50,13 +49,11 @@
                 position: relative;
                 z-index: 1;
 
-
                 &::before {
                     content: "";
                     @include position(absolute, 100%, auto, auto, 10%);
+                    @include width-height(80%, 5%);
                     background: $yellow;
-                    width: 80%;
-                    height: 5%;
                     z-index: -10;
                     transform: scale(0);
                     transition: 0.3s ease-in-out;
@@ -70,9 +67,8 @@
                 }
 
                 .nav__link {
-                    color: $white;
+                    @include text(1.3rem, $white);
                     padding: 1rem;
-                    font-size: 1.3rem;
                     text-transform: capitalize;
 
                     &:hover {
