@@ -9,7 +9,6 @@ const navList = document.querySelector('.nav__list');
 
 navBtn.addEventListener('click', () => {
     navList.classList.toggle('show');
-    console.log('heloo');
 });
 
 // Link anchor points jumping upon click in nav bar
@@ -17,7 +16,7 @@ document.getElementById("aboutAnchorJS").addEventListener("click", function(even
   event.preventDefault();
   let aboutSection = document.querySelector(".about");
   let aboutSectionPosition = aboutSection.getBoundingClientRect().top;
-  let adjustedPosition = aboutSectionPosition - 220; // adjust the position by the amount of the margin
+  let adjustedPosition = aboutSectionPosition - 220; // adjust the position with this number
   window.scrollTo({
     top: adjustedPosition
   });
@@ -27,7 +26,7 @@ document.getElementById("projectsAnchorJS").addEventListener("click", function(e
   event.preventDefault();
   let projectsSection = document.querySelector(".projects");
   let projectsSectionPosition = projectsSection.getBoundingClientRect().top;
-  let adjustedPosition = projectsSectionPosition - 200; // adjust the position by the amount of the margin
+  let adjustedPosition = projectsSectionPosition - 200; // adjust the position with this number
   window.scrollTo({
     top: adjustedPosition
   });
@@ -80,7 +79,7 @@ window.addEventListener('scroll', revealAbout);
     for(var i = 0; i < reveals.length; i++){
       var windowheight = window.innerHeight;
       var revealtop = reveals[i].getBoundingClientRect().top;
-      var revealpoint = 200;
+      var revealpoint = 180;
       if(revealtop < windowheight - revealpoint){
         reveals[i].classList.add('active');
       }
@@ -100,7 +99,7 @@ const skillsSection = document.getElementById('parallaxJS');
 
   window.addEventListener('scroll', function() {
     let scrollY = window.pageYOffset;
-    skillsSection.style.backgroundPositionY = -(scrollY * 0.25) + 'px';
+    skillsSection.style.backgroundPositionY = -(scrollY * 0.20) + 'px';
 });
 
 

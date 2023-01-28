@@ -14,11 +14,8 @@
     color: $gray-text;
 
     &__wrapper {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 3rem;
+        @include grid(center, 3rem, 4);
         background-color: transparent;
-        place-items: center;
         
         @media(max-width:1400px) {
             grid-template-columns: repeat(2, 1fr);
@@ -36,19 +33,19 @@
 
             // all project pictures (thumbnails)
             .projects__one__img {
-                background: url('../../assets/img/projects-imgs/card-one.jpg') no-repeat center / cover;
+                background: url('../../assets/img/projects-imgs/card-one.jpeg') no-repeat center / cover;
             }
 
             .projects__two__img {
-                background: url('../../assets/img/projects-imgs/card-two.png') no-repeat center / cover;
+                background: url('../../assets/img/projects-imgs/card-two.jpeg') no-repeat center / cover;
             }
 
             .projects__three__img {
-                background: url("../../assets/img/projects-imgs/card-three.png") no-repeat center / cover;
+                background: url("../../assets/img/projects-imgs/card-three.jpeg") no-repeat center / cover;
             }
 
             .projects__four__img {
-                background: url("../../assets/img/projects-imgs/card-four.png") no-repeat center / cover;
+                background: url("../../assets/img/projects-imgs/card-four.jpeg") no-repeat center / cover;
             }
 
             .projects__global__img {
@@ -77,3 +74,5 @@
         }
     }
 }
+
+

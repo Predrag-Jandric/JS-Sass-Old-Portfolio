@@ -11,24 +11,18 @@
 .skills {
     @include flex(center, center, column nowrap, 4rem);
     padding: 2.5rem 0rem;
-    background: url('../../assets/img/skills-imgs/skills-bkgr.jpg') no-repeat center;
+    background: url('../../assets/img/skills-imgs/skills-bkgr.jpeg') no-repeat center;
     
     &__wrapper {
-        justify-content: center;
-        width: 56.25rem;
-        gap: 1.5rem; 
+        @include grid(center, 2rem, 8);
         font-size: 1.1rem;
-        display: grid;
-        grid-template-columns: repeat(8, 1fr); 
 
         @media(max-width:1200px) {
-        grid-template-columns: repeat(4, 1fr);
-        width: 43.75rem; 
+        grid-template-columns: repeat(4, 1fr); 
         }
 
         @media(max-width:768px) {
         grid-template-columns: repeat(2, 1fr); 
-        width: 18.75rem;
         }
 
         .skills__card {

@@ -12,6 +12,13 @@
     gap: $gap;
 }
 
+@mixin grid($place-items, $gap, $cols) {
+    display: grid;
+    place-items: $place-items;
+    gap: $gap;
+    grid-template-columns: repeat($cols, 1fr);
+}
+
 @mixin position($position, $top: auto, $right: auto, $bottom: auto, $left: auto) {
     position: $position;
     top: $top;
@@ -37,4 +44,12 @@
 @mixin margin-padding($margin, $padding) {
     margin: $margin;
     padding: $padding;
+}
+
+@mixin revealJS($position, $transform, $opacity, $transition, $blur) {
+    position: $position;
+    transform: $transform;
+    opacity: $opacity;
+    transition: $transition;
+    filter: blur($blur);
 }
