@@ -24,19 +24,27 @@
         width: 55%;
 
         @media(max-width:768px){
+            @include position(absolute, auto, auto, auto, auto);
             @include flex(center, center, column nowrap, 0);
-            position: unset;
             width: 88%;
             text-align: center;
         }
 
         .header__title {
-            @include text(clamp(2.5rem, 2.7vw, 8rem), $yellow, $headers-font);
+            @include text(2.6rem, $yellow, $headers-font);
+
+            @media(max-width:768px){
+                @include text(2.2rem, $yellow, $headers-font);
+            }
         }
 
         .header__p {
-            @include text(clamp(1.3rem, 1.3vw, 2rem), $white);
+            @include text(1.33rem, $white);
             margin: 1.5rem 0;
+
+            @media(max-width:768px){
+                @include text(1.2rem, $white);
+            }
         }
 
         // planets
