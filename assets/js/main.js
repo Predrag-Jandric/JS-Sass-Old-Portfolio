@@ -7,12 +7,38 @@
 const navBtn = document.getElementById("hamburgerJS");
 const navList = document.querySelector('.nav__list');
 
-navBtn.addEventListener('click', () => {
-    navList.classList.toggle('show');
+navBtn.addEventListener('click', function () {
+  navList.classList.toggle('showJS');
 });
 
-// Link anchor points jumping upon click in nav bar
-document.getElementById("aboutAnchorJS").addEventListener("click", function(event) {
+// ABOUT section anchor point jump
+// const aboutAnchorBtn = document.getElementById("aboutAnchorJS");
+// const aboutSection = document.querySelector(".aboutAnchorDestinationJS");
+
+// aboutAnchorBtn.addEventListener("click", function (e) {
+//   aboutSection.scrollIntoView({
+//     behaviour: "smooth"
+//   })
+//   e.preventDefault();
+// })
+
+// PROJECTS section anchor point jump
+// const projectsAnchorBtn = document.getElementById("projectsAnchorJS");
+// const projectsSection = document.querySelector(".projectsAnchorDestinationJS");
+
+// projectsAnchorBtn.addEventListener("click", function (e) {
+//   projectsSection.scrollIntoView({
+//     inline: "end",
+//     block: "end",
+//     behaviour: "smooth"
+//   })
+//   e.preventDefault();
+// })
+
+
+// OLD anchor points jump code
+
+document.getElementById("aboutAnchorJS").addEventListener("click", function (event) {
   event.preventDefault();
   let aboutSection = document.querySelector(".about");
   let aboutSectionPosition = aboutSection.getBoundingClientRect().top;
@@ -22,7 +48,7 @@ document.getElementById("aboutAnchorJS").addEventListener("click", function(even
   });
 });
 
-document.getElementById("projectsAnchorJS").addEventListener("click", function(event) {
+document.getElementById("projectsAnchorJS").addEventListener("click", function (event) {
   event.preventDefault();
   let projectsSection = document.querySelector(".projects");
   let projectsSectionPosition = projectsSection.getBoundingClientRect().top;
@@ -39,27 +65,28 @@ document.getElementById("projectsAnchorJS").addEventListener("click", function(e
 
 // Header section appear effect, immediately upon entering site
 var reveal = document.querySelector('.revealHeaderJS');
-  reveal.classList.add('active');
+reveal.classList.add('active');
 
 
 // Header parallax effect on mouse move for planets 
 document.addEventListener("mousemove", parallax);
-  function parallax(e){
-    document.querySelectorAll(".mouseMoveParallaxJS").forEach(function(move){
+function parallax(e) {
+  document.querySelectorAll(".mouseMoveParallaxJS").forEach(function (move) {
 
     var moving_value = move.getAttribute("data-value");
     var x = (e.clientX * moving_value) / 50;
     var y = (e.clientY * moving_value) / 50;
 
     move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
-    }
-)}
+  }
+  )
+}
 
 
 // Header star passing across screen on scroll parallax effect
 let star = document.querySelector('.starParallaxJS')
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function () {
   let value = window.scrollY
 
   star.style.transform = 'translateY(' + value * 1.5 + 'px) translateX(' + -value * 1.5 + 'px)'
@@ -73,21 +100,22 @@ window.addEventListener('scroll', function(){
 // About, Footer and Projects sections appear effect on scroll 
 window.addEventListener('scroll', revealAbout);
 
-  function revealAbout(){
-    var reveals = document.querySelectorAll('.revealSectionJS');
+function revealAbout() {
+  var reveals = document.querySelectorAll('.revealSectionJS');
 
-    for(var i = 0; i < reveals.length; i++){
-      var windowheight = window.innerHeight;
-      var revealtop = reveals[i].getBoundingClientRect().top;
-      var revealpoint = 180;
-      if(revealtop < windowheight - revealpoint){
-        reveals[i].classList.add('active');
-      }
-      // uncomment else statement to make elements' animations show multiple times
-      // else{
-      //   reveals[i].classList.remove('active');
-      // }
-}}
+  for (var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 180;
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add('active');
+    }
+    // uncomment else statement to make elements' animations show multiple times
+    // else{
+    //   reveals[i].classList.remove('active');
+    // }
+  }
+}
 
 
 /*-------------------------------
@@ -97,9 +125,9 @@ window.addEventListener('scroll', revealAbout);
 // Skills section parallax effect on scroll for bg image 
 const skillsSection = document.getElementById('parallaxJS');
 
-  window.addEventListener('scroll', function() {
-    let scrollY = window.pageYOffset;
-    skillsSection.style.backgroundPositionY = -(scrollY * 0.20) + 'px';
+window.addEventListener('scroll', function () {
+  let scrollY = window.pageYOffset;
+  skillsSection.style.backgroundPositionY = -(scrollY * 0.20) + 'px';
 });
 
 
@@ -109,12 +137,12 @@ const skillsSection = document.getElementById('parallaxJS');
 
 let preloader = document.getElementById("preloaderJS");
 
-  // listen for the page to finish loading
-  window.addEventListener("load", function() {
-    preloader.style.display = "none";
-  });
+// listen for the page to finish loading
+window.addEventListener("load", function () {
+  preloader.style.display = "none";
+});
 
-  // change the last value from "none" to "flex" in order to 
+  // change the last value from "none" to "flex" in order to
   // see the animation forever and be able to style it
 
 

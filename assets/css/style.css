@@ -204,7 +204,7 @@ img {
         NAV SECTION
 -------------------------------*/
 .nav {
-  background-color: #21262c;
+  background: linear-gradient(to right, #21262c, #0B2132);
   padding: 7px 0;
   position: relative;
   z-index: 200;
@@ -245,7 +245,7 @@ img {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 }
-.nav__wrapper .nav__list.show {
+.nav__wrapper .nav__list.showJS {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .nav__wrapper .nav__list .nav__item {
@@ -307,38 +307,26 @@ img {
   background: url("../../assets/img/header-imgs/header-bg.jpeg") no-repeat center/cover;
   z-index: 100;
   overflow: hidden;
-}
-@media (max-width: 768px) {
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    gap: 0;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  gap: 0;
 }
 .header__wrapper {
-  position: absolute;
-  top: 30%;
-  right: auto;
-  bottom: auto;
-  left: 10%;
   width: 55%;
+  margin-left: 7rem;
 }
 @media (max-width: 768px) {
   .header__wrapper {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
     gap: 0;
-    width: 88%;
+    width: 93%;
     text-align: center;
+    margin: 0 auto;
   }
 }
 .header__wrapper .header__title {
@@ -378,8 +366,11 @@ img {
     border: none;
   }
 }
+.header__wrapper .header__span {
+  color: #FFC654;
+}
 @media (max-width: 768px) {
-  .header__wrapper .header__earth, .header__wrapper .header__moon, .header__wrapper .header__star {
+  .header__wrapper .header__earth, .header__wrapper .header__moon .header__star {
     display: none;
   }
 }
@@ -453,7 +444,7 @@ img {
   gap: 2rem;
 }
 .about__wrapper .about__content .about__item:first-child img {
-  width: 10rem;
+  width: 12rem;
   border-radius: 50%;
 }
 @media (max-width: 480px) {
@@ -521,6 +512,7 @@ img {
   gap: 2rem;
   grid-template-columns: repeat(8, 1fr);
   font-size: 1.1rem;
+  transform: rotateX("45deg");
 }
 @media (max-width: 1200px) {
   .skills__wrapper {
@@ -566,24 +558,24 @@ img {
   background: url("../../assets/img/skills-imgs/js.png") no-repeat center/cover;
 }
 
-.skills__git {
-  background: url("../../assets/img/skills-imgs/git.png") no-repeat center/cover;
+.skills__react {
+  background: url("../../assets/img/skills-imgs/react.png") no-repeat center/cover;
+}
+
+.skills__redux {
+  background: url("../../assets/img/skills-imgs/redux-toolkit.png") no-repeat center/cover;
 }
 
 .skills__sass {
   background: url("../../assets/img/skills-imgs/sass.png") no-repeat center/cover;
 }
 
-.skills__bootstrap {
-  background: url("../../assets/img/skills-imgs/bootstrap.png") no-repeat center/cover;
+.skills__tailwind {
+  background: url("../../assets/img/skills-imgs/tailwind.png") no-repeat center/cover;
 }
 
-.skills__photoshop {
-  background: url("../../assets/img/skills-imgs/photoshop.png") no-repeat center/cover;
-}
-
-.skills__figma {
-  background: url("../../assets/img/skills-imgs/figma.png") no-repeat center/cover;
+.skills__git {
+  background: url("../../assets/img/skills-imgs/git.png") no-repeat center/cover;
 }
 
 /*-------------------------------
@@ -621,16 +613,16 @@ img {
   border-radius: 5px;
 }
 .projects__wrapper .projects__item-global .projects__one__img {
-  background: url("../../assets/img/projects-imgs/card-one.jpeg") no-repeat center/cover;
+  background: url("../../assets/img/projects-imgs/card-valve.jpeg") no-repeat center/cover;
 }
 .projects__wrapper .projects__item-global .projects__two__img {
-  background: url("../../assets/img/projects-imgs/card-two.jpeg") no-repeat center/cover;
+  background: url("../../assets/img/projects-imgs/card-react.png") no-repeat center/cover;
 }
 .projects__wrapper .projects__item-global .projects__three__img {
-  background: url("../../assets/img/projects-imgs/card-three.jpeg") no-repeat center/cover;
+  background: url("../../assets/img/projects-imgs/card-portfolio.jpeg") no-repeat center/cover;
 }
 .projects__wrapper .projects__item-global .projects__four__img {
-  background: url("../../assets/img/projects-imgs/card-four.jpeg") no-repeat center/cover;
+  background: url("../../assets/img/projects-imgs/card-bootstrap.jpeg") no-repeat center/cover;
 }
 .projects__wrapper .projects__item-global .projects__global__img {
   height: 18.75rem;
@@ -723,7 +715,7 @@ img {
   margin: 0 0 1rem 0;
   padding: 10px;
   border-radius: 5px;
-  border: 1px #4d5055 solid;
+  border: 1px #a7a7a7 solid;
   display: block;
 }
 .footer__wrapper .footer__item.footer__item__one textarea {
@@ -732,7 +724,7 @@ img {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   border-radius: 5px;
-  border: 1px #4d5055 solid;
+  border: 1px #a7a7a7 solid;
   padding: 10px;
   width: 100%;
 }

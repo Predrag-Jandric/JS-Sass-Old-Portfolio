@@ -17,6 +17,7 @@
         @include grid(center, 3rem, 4);
         background-color: transparent;
         
+        
         @media(max-width:1400px) {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -31,21 +32,22 @@
             border-radius: 5px;
 
 
+
             // all project pictures (thumbnails)
             .projects__one__img {
-                background: url('../../assets/img/projects-imgs/card-one.jpeg') no-repeat center / cover;
+                background: url('../../assets/img/projects-imgs/card-valve.jpeg') no-repeat center / cover;
             }
 
             .projects__two__img {
-                background: url('../../assets/img/projects-imgs/card-two.jpeg') no-repeat center / cover;
+                background: url('../../assets/img/projects-imgs/card-react.png') no-repeat center / cover;
             }
 
             .projects__three__img {
-                background: url("../../assets/img/projects-imgs/card-three.jpeg") no-repeat center / cover;
+                background: url("../../assets/img/projects-imgs/card-portfolio.jpeg") no-repeat center / cover;
             }
 
             .projects__four__img {
-                background: url("../../assets/img/projects-imgs/card-four.jpeg") no-repeat center / cover;
+                background: url("../../assets/img/projects-imgs/card-bootstrap.jpeg") no-repeat center / cover;
             }
 
             .projects__global__img {

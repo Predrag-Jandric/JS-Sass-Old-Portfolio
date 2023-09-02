@@ -48,12 +48,12 @@
                     @include width-height(100%, 2.188rem);
                     @include margin-padding(0 0 1rem 0, 10px);
                     border-radius: 5px;
-                    border: 1px $gray-text solid;
+                    border: 1px $gray-border solid;
                     display: block;
                 }
 
                 textarea {
-                    @include text(0.9rem, auto, $text-font, normal, 5px, 1px $gray-text solid);
+                    @include text(0.9rem, auto, $text-font, normal, 5px, 1px $gray-border solid);
                     padding: 10px;
                     width: 100%;
                     

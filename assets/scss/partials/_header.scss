@@ -14,20 +14,17 @@
     background: url('../../assets/img/header-imgs/header-bg.jpeg') no-repeat center / cover;
     z-index: 100;
     overflow: hidden;
-
-    @media(max-width:768px){
-        @include flex(center, center, column nowrap, 0);
-    }
+    @include flex(center, flex-start, column nowrap, 0);
     
     &__wrapper {
-        @include position(absolute, 30%, auto, auto, 10%);
         width: 55%;
+        margin-left: 7rem;
 
         @media(max-width:768px){
-            @include position(absolute, auto, auto, auto, auto);
             @include flex(center, center, column nowrap, 0);
-            width: 88%;
+            width: 93%;
             text-align: center;
+            margin:  0 auto;
         }
 
         .header__title {
@@ -47,8 +44,12 @@
             }
         }
 
+        .header__span {
+            color: $yellow;
+        }
+
         // planets
-        .header__earth, .header__moon, .header__star {
+        .header__earth, .header__moon .header__star {
 
             @media(max-width:768px){
                 display: none;

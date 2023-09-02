@@ -26,7 +26,7 @@
         <div class="nav__wrapper">
             <a href="index.html" class="nav__logo"><img src="assets/img/logo.jpeg" alt="logo img" class="nav__image"></a>
             <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link" id="aboutAnchorJS">about</a></li>
+                <li class="nav__item"><a href="#test" class="nav__link" id="aboutAnchorJS">about</a></li>
                 <li class="nav__item"><a href="#" class="nav__link" id="projectsAnchorJS" >projects</a></li>
                 <li class="nav__item"><a href="#contactAnchor" class="nav__link">contact</a></li>
             </ul>
@@ -44,8 +44,8 @@
     <!-- Header section start -->
     <header class="header">
         <div class="header__wrapper revealHeaderJS">
-            <h1 class="header__title">Welcome, my name is Predrag</h1>
-            <p class="header__p">Let's make the internet interesting ! I am eager to fulfill my potential and create outstanding websites that deliver an exceptional user experience.</p>
+            <h1 class="header__title">Hi, my name is Predrag</h1>
+            <p class="header__p">Let's make the internet interesting ! I am eager to fulfill my potential as <span class="header__span"> React Front-end developer</span> and create outstanding websites that deliver an exceptional user experience.</p>
             <div class="header__icons icons__global">
                 <a href="https://www.linkedin.com/in/predrag-jandric/" target="_blank" class="header__link"><img
                         src="assets/img/all-social-icons/linkedIn.png" alt="image missing" class="header__img"></a>
@@ -68,7 +68,7 @@
     <!-- Header section end -->
 
 
-    <h2 id="section__title__global">About</h2>
+    <h2 class="aboutAnchorDestinationJS" id="section__title__global">About</h2>
     
 
     <!-- About section start -->
@@ -84,15 +84,15 @@
                     </div>
                 </article>
                 <article class="about__item">
-                    <h3 class="about__title">I am Predrag Jandric, a Front End web developer</h3>
-                    <p class="about__desc">With a strong background in HTML, CSS, and JavaScript, I have a keen eye for design and a knack for creating visually appealing interfaces. I have experience in building responsive and mobile-friendly websites. I also make
+                    <h3 class="about__title">Progress oriented Front End web developer</h3>
+                    <p class="about__desc">Through three years of dedicated learning via courses, personal projects, and guidance, I've developed a strong grasp of programming concepts. To solidify my understanding, I also create 
                         <a href="https://www.youtube.com/@predragjandric/videos" target="_blank"
-                        id="link__properties__global">Youtube tutorials</a> for myself, as a way to reinforce what I've learned.
+                        id="link__properties__global">YouTube tutorials</a> for my own benefit. As I continuously work towards becoming a better developer, I'm excited to collaborate with like-minded professionals.
                     </p>
                 </article>
             </div>
             <button class="btn__global about__btn">
-                <a href="Predrag-Jandric-CV.pdf" download>View CV</a>
+                <a href="Predrag-Jandric-CV.pdf" download>Download CV</a>
             </button>
         </div>
     </section>
@@ -107,73 +107,55 @@
         <div class="skills__wrapper">
             <article class="skills__card">
                 <div class="skills__html skills__global"></div>
-                <p class="skills__p">HTML</p>
+                <p class="skills__p">Html</p>
             </article>
             <article class="skills__card">
                 <div class="skills__css skills__global"></div>
-                <p class="skills__p">CSS</p>
+                <p class="skills__p">Css</p>
             </article>
             <article class="skills__card">
                 <div class="skills__js skills__global"></div>
                 <p class="skills__p">Java Script</p>
             </article>
             <article class="skills__card">
-                <div class="skills__git skills__global"></div>
-                <p class="skills__p">Git</p>
+                <div class="skills__react skills__global"></div>
+                <p class="skills__p">React</p>
+            </article>
+            <article class="skills__card">
+                <div class="skills__redux skills__global"></div>
+                <p class="skills__p">Redux</p>
             </article>
             <article class="skills__card">
                 <div class="skills__sass skills__global"></div>
                 <p class="skills__p">Sass</p>
             </article>
             <article class="skills__card">
-                <div class="skills__bootstrap skills__global"></div>
-                <p class="skills__p">Bootstrap</p>
+                <div class="skills__tailwind skills__global"></div>
+                <p class="skills__p">Tailwind </p>
             </article>
             <article class="skills__card">
-                <div class="skills__photoshop skills__global"></div>
-                <p class="skills__p">Photoshop</p>
-            </article>
-            <article class="skills__card">
-                <div class="skills__figma skills__global"></div>
-                <p class="skills__p">Figma</p>
+                <div class="skills__git skills__global"></div>
+                <p class="skills__p">Git VCS</p>
             </article>
         </div>
     </section>
     <!-- Skills section end -->
 
     
-    <h2 id="section__title__global">Projects</h2>
+    <h2 class="projectsAnchorDestinationJS" id="section__title__global">Projects</h2>
 
 
     <!-- Projects section start -->
     <section class="projects">
         <div class="projects__wrapper revealSectionJS">
 
+
             <article class="projects__item-global">
                 <div class="projects__one__img projects__global__img"></div>
 
                 <div class="projects__text">
-                    <h3 class="projects__h3">Portfolio</h3>
-                    <p class="projects__p">A showcase of my skills and experience as a developer. It took many months of hard work and dedication to create. It went through several design and code changes.</p>
-                    <div class="projects__btn__container">
-                        <button class="btn__global">
-                            <a href="https://github.com/Predrag-Jandric/Portfolio" target="blank">Code</a>
-                        </button>
-                        <button class="btn__global" >
-                            <a href="javascript:void(0)" onclick="alert('You are already on the Portfolio preview');">Preview</a>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="projects__item-global">
-                <div class="projects__two__img projects__global__img"></div>
-
-                
-
-                <div class="projects__text">
                     <h3 class="projects__h3">Valve Corp. Clone</h3>
-                    <p class="projects__p">I was inspired by this <a id="link__properties__global" href="https://www.valvesoftware.com/en/" target="blank">ValveCorp</a> webpage, to recreate it mobile first, using my own Sass skills.  The end result is a faithful clone of the original webpage which is made with Bootstrap.</p>
+                    <p class="projects__p">I was inspired by this <a id="link__properties__global" href="https://www.valvesoftware.com/en/" target="blank">ValveCorp</a> webpage, to recreate it mobile first. The end result is a faithful clone of the original webpage which I made with HTML, JS and styled with Sass.</p>
                     <div class="projects__btn__container">
                         <button class="btn__global">
                             <a href="https://github.com/Predrag-Jandric/SASS-valve-clone" target="blank">Code</a>
@@ -185,8 +167,45 @@
                 </div>
             </article>
 
+
+            <article class="projects__item-global">
+                <div class="projects__two__img projects__global__img"></div>
+
+                <div class="projects__text">
+                    <h3 class="projects__h3">React online store</h3>
+                    <p class="projects__p">Ecommerce simulation project that uses modern React features such as Advanced state management, mapping data from API, Routing, reusable components and more.</p>
+                    <div class="projects__btn__container">
+                        <button class="btn__global">
+                            <a href="https://github.com/Predrag-Jandric/React-online-store-exercise" target="blank">Code</a>
+                        </button>
+                        <button class="btn__global">
+                            <a href="https://peppy-khapse-f13bb3.netlify.app/" target="blank">Preview</a>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
             <article class="projects__item-global">
                 <div class="projects__three__img projects__global__img"></div>
+
+                <div class="projects__text">
+                    <h3 class="projects__h3">Portfolio</h3>
+                    <p class="projects__p">A showcase of my skills and experience as a developer. It took months of dedication to create and design. It went through several iterations. React version is coming soon.</p>
+                    <div class="projects__btn__container">
+                        <button class="btn__global">
+                            <a href="https://github.com/Predrag-Jandric/Portfolio" target="blank">Code</a>
+                        </button>
+                        <button class="btn__global" >
+                            <a href="javascript:void(0)" onclick="alert('You are already on Portfolio preview');">Preview</a>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="projects__item-global">
+                <div class="projects__four__img projects__global__img"></div>
 
                 <div class="projects__text">
                     <h3 class="projects__h3">Bootstrap webpage</h3>
@@ -197,23 +216,6 @@
                         </button>
                         <button class="btn__global">
                             <a href="https://bootstrap-climate-webpage-page.netlify.app/" target="blank">Preview</a>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="projects__item-global">
-                <div class="projects__four__img projects__global__img"></div>
-
-                <div class="projects__text">
-                    <h3 class="projects__h3">Admin dashboard</h3>
-                    <p class="projects__p">Responsive and user friendly front-end practice project in which I built admin dashboard website  with modern and clean design in mind, with HTML, Sass and some JavaScript.</p>
-                    <div class="projects__btn__container">
-                        <button class="btn__global">
-                            <a href="https://github.com/Predrag-Jandric/Sass-dashboard" target="blank">Code</a>
-                        </button>
-                        <button class="btn__global">
-                            <a href="https://courageous-dodol-82fe98.netlify.app/" target="blank">Preview</a>
                         </button>
                     </div>
                 </div>
@@ -242,11 +244,12 @@
                 <input type="hidden" name="_next" value="https://www.predrag-jandric.com/thankYou.html">
                 <input type="hidden" name="_captcha" value="false">
             </form>
+            
 
             <article class="footer__item footer__item__two">
                 <h3 class="footer__title">Get in Touch</h3>
                 <p>I would love to hear your feedback and opinion on it. If you want to connect with me or check out more of my work you can find me on LinkedIn, GitHub and my Youtube channel. Thank you for visiting!</p>
-                <p>Email <a id="link__properties__global" href="mailto: predrag.jandric.bg@gmail.com">predrag.jandric.bg@gmail.com</a></p>
+                <p>My Email is: <a id="link__properties__global" href="mailto: predrag.jandric.bg@gmail.com">predrag.jandric.bg@gmail.com</a></p>
                 
                 <article class="footer__social icons__global">
                     <a href="https://www.linkedin.com/in/predrag-jandric/" target="_blank"><img src="assets/img/all-social-icons/linkedIn.png"

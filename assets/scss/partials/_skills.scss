@@ -16,6 +16,7 @@
     &__wrapper {
         @include grid(center, 2rem, 8);
         font-size: 1.1rem;
+        transform: rotateX('45deg');
 
         @media(max-width:1200px) {
         grid-template-columns: repeat(4, 1fr); 
@@ -49,26 +50,31 @@
 .skills__html {
     background: url('../../assets/img/skills-imgs/html.png') no-repeat center / cover;
 }
+
 .skills__css {
     background: url('../../assets/img/skills-imgs/css.png') no-repeat center / cover;
 }
+
 .skills__js {
     background: url('../../assets/img/skills-imgs/js.png') no-repeat center / cover;
 }
-.skills__git {
-    background: url('../../assets/img/skills-imgs/git.png') no-repeat center / cover;
+
+.skills__react {
+    background: url('../../assets/img/skills-imgs/react.png') no-repeat center / cover;
 }
+
+.skills__redux {
+    background: url('../../assets/img/skills-imgs/redux-toolkit.png') no-repeat center / cover;
+}
+
 .skills__sass {
     background: url('../../assets/img/skills-imgs/sass.png') no-repeat center / cover;
 }
-.skills__bootstrap {
-    background: url('../../assets/img/skills-imgs/bootstrap.png') no-repeat center / cover;
-}
-.skills__photoshop {
-    background: url('../../assets/img/skills-imgs/photoshop.png') no-repeat center / cover;
-}
-.skills__figma {
-    background: url('../../assets/img/skills-imgs/figma.png') no-repeat center / cover;
+
+.skills__tailwind {
+    background: url('../../assets/img/skills-imgs/tailwind.png') no-repeat center / cover;
 }
 
-
+.skills__git {
+    background: url('../../assets/img/skills-imgs/git.png') no-repeat center / cover;
+}

@@ -9,7 +9,7 @@
 -------------------------------*/
 
 .nav {
-    background-color: #21262c;
+    background: linear-gradient(to right, #21262c, #0B2132) ;
     padding: 7px 0;
     position: relative;
     z-index: 200;
@@ -40,7 +40,7 @@
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             }
 
-            &.show {
+            &.showJS {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                 
             }
