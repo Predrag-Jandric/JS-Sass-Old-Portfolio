@@ -64,7 +64,7 @@ document.getElementById("projectsAnchorJS").addEventListener("click", function (
 -------------------------------*/
 
 // Header section appear effect, immediately upon entering site
-var reveal = document.querySelector('.revealHeaderJS');
+let reveal = document.querySelector('.revealHeaderJS');
 reveal.classList.add('active');
 
 
@@ -73,9 +73,9 @@ document.addEventListener("mousemove", parallax);
 function parallax(e) {
   document.querySelectorAll(".mouseMoveParallaxJS").forEach(function (move) {
 
-    var moving_value = move.getAttribute("data-value");
-    var x = (e.clientX * moving_value) / 50;
-    var y = (e.clientY * moving_value) / 50;
+    let moving_value = move.getAttribute("data-value");
+    let x = (e.clientX * moving_value) / 50;
+    let y = (e.clientY * moving_value) / 50;
 
     move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
   }
@@ -101,12 +101,12 @@ window.addEventListener('scroll', function () {
 window.addEventListener('scroll', revealAbout);
 
 function revealAbout() {
-  var reveals = document.querySelectorAll('.revealSectionJS');
+  let reveals = document.querySelectorAll('.revealSectionJS');
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowheight = window.innerHeight;
-    var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 180;
+  for (let i = 0; i < reveals.length; i++) {
+    let windowheight = window.innerHeight;
+    let revealtop = reveals[i].getBoundingClientRect().top;
+    let revealpoint = 180;
     if (revealtop < windowheight - revealpoint) {
       reveals[i].classList.add('active');
     }
