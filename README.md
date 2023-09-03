@@ -1,4 +1,4 @@
-# 🛠 Portfolio
+# 🛠 JS-Sass-Portfolio
 
 # 🔗 [Live Preview](https://www.predrag-jandric.com/)
 ![Design preview](./preview.png)
