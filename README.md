@@ -1,6 +1,6 @@
 # 🛠 JS-Sass-Portfolio
 
-# 🔗 [Live Preview](https://www.predrag-jandric.com/)
+# 🔗 [Live Preview](https://main--courageous-salamander-ab38dd.netlify.app/)
 ![Design preview](./preview.png)
 
 ## Welcome! 👋
